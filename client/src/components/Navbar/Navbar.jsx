@@ -102,7 +102,7 @@ const Navbar = () => {
                                     />
                                 </div>
                             )} */}
-                            {/* <AccountMenu /> */}
+                            <AccountMenu />
                         </>
                     )}
                     {width < 720 && (
