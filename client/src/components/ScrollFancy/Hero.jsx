@@ -155,7 +155,7 @@ const GsapScrubber = () => {
                             filter: "blur(20px)",
                             pointerEvents: "none",
                             textAlign: "center",
-                            fontFamily: "system-ui, -apple-system, sans-serif",
+                            fontFamily: "Sedgwick Ave Display, -apple-system, sans-serif",
                             textShadow: "0,0,10px #000"
                         }}
                     >

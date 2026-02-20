@@ -1,0 +1,97 @@
+.timer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    position: relative;
+    padding: 3rem 1rem;
+    /* background: url("/assets/Home/instruo-plane.svg") no-repeat top;
+    background-size: contain; */
+    /* max-width: 1200px; */
+}
+
+.timer * {
+    z-index: 1;
+}
+
+.timer .plane {
+    position: absolute;
+    width: min(900px, 100vw);
+    top: 0;
+    /* left: 50%;
+    transform: translateX(-50%); */
+    z-index: 0;
+    animation: PlaneFloat 6s ease-in-out infinite;
+}
+
+.timer .plane img {
+    width: 100%;
+}
+
+.timer .countdown {
+    display: flex;
+    gap: 0.3rem;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.timer .countdown .box {
+    width: 180px;
+    background-color: hsla(0, 0%, 100%, 0.20);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0.4rem 0.7rem;
+    gap: 0.2rem;
+}
+
+.timer .countdown .box .time {
+    font-family: 'Michroma', sans-serif;
+    font-size: 5rem;
+}
+
+.timer .countdown .box .label {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.2rem;
+    color: var(--offwhite);
+}
+
+
+@media only screen and (max-width: 400px) {
+    .timer .countdown {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .timer .countdown .box {
+        width: 100%;
+    }
+    .timer .countdown .box .time  {
+        font-size: 2.5rem;
+    }
+
+    .timer .countdown .box .label {
+        font-size: 1rem;
+    }
+}
+
+@keyframes PlaneFloat {
+  0% {
+    transform: translate(0, 0px) rotate(0deg);
+  }
+  25% {
+    transform: translate(-3px, -5px) rotate(-0.5deg); 
+  }
+  50% {
+    transform: translate(0, 0px) rotate(0deg);
+  }
+  75% {
+    transform: translate(3px, 5px) rotate(0.5deg); 
+  }
+  100% {
+    transform: translate(0, 0px) rotate(0deg);
+  }
+}

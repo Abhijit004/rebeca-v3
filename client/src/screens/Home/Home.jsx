@@ -5,7 +5,7 @@ import ArtistCard from "../../components/ArtistCard/ArtistCard";
 import Nightbanner from "../../components/Nightbanner/Nightbanner";
 import CollageHeart from "../../components/CollageHeart/CollageHeart";
 import Hero from "../../components/ScrollFancy/Hero"
-import ScrambleText from "../../components/ScrambleText/ScrambleText";
+import CountDown from "../../components/CountDown/CountDown";
 
 const Home = () => {
 
@@ -22,6 +22,7 @@ const Home = () => {
                 </div>
                 
             </section>
+            <CountDown />
             <section className="section-3">
                 <h1 className="date">MARCH 20-23</h1>
                 <h4>Lords' Ground, IIEST Shibpur</h4>
