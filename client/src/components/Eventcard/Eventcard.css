@@ -1,12 +1,19 @@
+/* .event-card-container{
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  font-family: "Sedgwick Ave Display", cursive;
+} */
+
 .event-card {
   display: flex;
-  align-items: center;
+  align-items: stretch;
   justify-content: center;
-  border: 1px solid white;
   gap: 0.5rem;
   transition: all ease 0.3s;
   height: max-content;
   color: white;
+  max-height: 400px;
 }
 
 .event-card .event-data {
@@ -14,7 +21,7 @@
   padding: 1.2rem;
   transition: all ease 0.2s;
   display: flex;
-  /* justify-content: center; */
+  justify-content: center;
   padding-top: 0;
   padding-bottom: 0;
   position: relative;
@@ -25,12 +32,13 @@
 }
 
 .event-card .event-data.expand{
-  width: 400px;
+  width: min(400px,42vw);
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .event-card .event-data .data-header {
   font-size: 1.2rem;
-  /* font-family: ; */
   font-weight: 600;
   display: flex;
   align-items: center;
@@ -42,13 +50,30 @@
   padding-right: 0;
   transition: all ease 0.2s;
   gap: 2rem;
-  height: 50%;
-  /* flex-direction: column; */
+  /* height: 50%; */
   border: 0px solid red;
 }
 
+.event-card .event-data .data-header > * {
+  font-family: 'Sedgwick Ave Display', cursive;
+}
+
+.event-card .event-data.expand .data-header {
+  writing-mode: horizontal-tb;
+  transform: rotate(0deg);
+  height: fit-content;
+}
+
+.event-card .event-data.expand .data-header div {
+  font-size: 1.7rem;
+}
+
+.event-card .event-data.expand .data-header p {
+  font-size: 1.3rem;
+}
+
 .event-card .event-data .data-header p {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   text-align: right;
 }
 
@@ -130,6 +155,7 @@
   -webkit-line-clamp: 5;
   -webkit-box-orient: vertical;
   padding: 0 0 0 20px;
+  font-size: 1.2rem;
 }
 
 .event-card .event-data .data-header:hover {
@@ -186,7 +212,7 @@
   overflow-x: scroll;
   display: flex;
   align-items: start;
-  justify-content: start;
+  justify-content: flex-start;
   flex-direction: column;
 }
 
