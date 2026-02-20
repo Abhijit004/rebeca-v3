@@ -1,4 +1,3 @@
-// import React from "react";
 import React, { useEffect, useState } from "react";
 import "./Sponsorship.css";
 import SponsorCard from "./SponsorsCard";
@@ -8,6 +7,10 @@ import { Link } from "react-router-dom";
 import pastSponsorJsonData from "../../assets/data/pastSponsors.json";
 import sponsorJsonData from "../../assets/data/sponsors.json";
 import { Divider, Typography } from "@mui/material";
+import SponsorsMarquee  from "../../components/SponsorsMarquee/SponsorsMarquee";
+import WhySponsorBento from "../../components/WhySponsorBento/WhySponsorBento";
+import SponsorTiers from "../../components/SponsorTiers/SponsorTiers";
+import SponsorSkillTree from "../../components/SponsorSkillTree/SponsorSkillTree";
 
 const Heading1 = ({ title, subTitle, w }) => {
     return (
@@ -129,24 +132,20 @@ function Sponsorship() {
                 </section>
 
                 <section className="section-2">
-                    <div className="flow-chart">
-                        <img src={`/assets/imgs/sponsorship/${fileName}.webp`} alt="" />
-                    </div>
+                    <WhySponsorBento />
                 </section>
                 {/* <section className="section-2">
-					<div className="cover-pic">
-						<img
-							src="/assets/imgs/sponsorship/coverPic1.webp"
-							alt=""
-						/>
-					</div>
-				</section> */}
+                    <div className="cover-pic">
+                        <img
+                            src="/assets/imgs/sponsorship/coverPic1.webp"
+                            alt=""
+                        />
+                    </div>
+                </section> */}
 
                 <section className="section-3">
-                    <Heading1 title={"Sponsor Categories"} w={"60%"}></Heading1>
-                    <div className="sponsor-categories">
-                        <img src={`/assets/imgs/sponsorship/${sponsorCategories}.webp`} alt="" />
-                    </div>
+                    <Heading1 title={"Sponsor Categories"} w={"100%"}></Heading1>
+                    <SponsorSkillTree />
                 </section>
                 <div
                     style={{
@@ -204,31 +203,17 @@ function Sponsorship() {
                     ))}
                 </section>
 
+                {/* --- UPDATED PAST SPONSORS SECTION --- */}
                 <section className="section-4">
                     <div style={{ padding: "0 1rem" }}>
                         <Heading1 title={"Past-sponsors"}></Heading1>
                     </div>
-                    <div className="center1">
-                        <div className="cards">
-                            {pastSponsorJsonData.map((sponsor, index) => (
-                                <SponsorCard key={index} sponsor={sponsor} />
-                            ))}
-                        </div>
-                    </div>
+                    
+                    <SponsorsMarquee sponsorsList={pastSponsorJsonData} />
+                    
                 </section>
             </div>
         </div>
     );
 }
 export default Sponsorship;
-
-// in case needed, removed from sponsors.json
-// {
-// 	"id": 8,
-// 	"title": "Drinks Partner",
-// 	"logos": [
-// 		{
-// 			"imgname": "sponsorsImages/RED BULL"
-// 		}
-// 	]
-// }

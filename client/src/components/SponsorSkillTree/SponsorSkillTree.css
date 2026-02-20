@@ -1,0 +1,309 @@
+.horizontal-tree-wrapper {
+    width: 100%;
+    max-width: 1100px;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    /* Stacks the canvas on top, codex on bottom so they NEVER overlap */
+    background: rgba(15, 18, 20, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* --- TOP SIDE: Canvas --- */
+.tree-canvas-horizontal {
+    position: relative;
+    width: 100%;
+    height: 280px;
+    /* Gives enough room for the top and bottom text */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    background: radial-gradient(circle at center, rgba(30, 30, 40, 0.5) 0%, rgba(10, 10, 15, 1) 100%);
+}
+
+.tree-svg-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.tree-branch {
+    stroke: rgba(255, 255, 255, 0.1);
+    stroke-width: 3px;
+    transition: all 0.3s ease;
+}
+
+.branch-unlocked {
+    stroke: var(--accent2);
+    filter: drop-shadow(0 0 6px var(--accent2));
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+    animation: tracePath 0.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+@keyframes tracePath {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+/* --- HTML Nodes --- */
+.tree-node-horizontal {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.node-icon-wrapper {
+    width: 50px;
+    height: 50px;
+    background: #111;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.node-icon-wrapper .material-icons {
+    transform: rotate(-45deg);
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+/* Hand-written Text mapped perfectly to your original design */
+.node-amount {
+    position: absolute;
+    top: -45px;
+    font-family: 'Agency FB', cursive;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+    white-space: nowrap;
+}
+
+.node-name {
+    position: absolute;
+    bottom: -65px;
+    font-family: 'Agency FB', cursive;
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    white-space: nowrap;
+    text-align: center;
+}
+
+/* Node Hover & Active States */
+.node-unlocked .node-icon-wrapper {
+    border-color: var(--accent1);
+    background: rgba(190, 38, 110, 0.1);
+    box-shadow: 0 0 15px rgba(190, 38, 110, 0.3);
+}
+
+.node-unlocked .material-icons {
+    color: var(--accent1);
+}
+
+.node-unlocked .node-name {
+    color: white;
+}
+
+.node-unlocked .node-amount {
+    color: white;
+}
+
+.node-current .node-icon-wrapper {
+    transform: rotate(45deg) scale(1.2);
+    background: var(--accent1);
+    border-color: white;
+    box-shadow: 0 0 25px var(--accent1);
+}
+
+.node-current .material-icons {
+    color: white;
+}
+
+.node-current .node-name {
+    color: var(--accent1);
+    text-shadow: 0 0 10px rgba(190, 38, 110, 0.5);
+}
+
+.node-current .node-amount {
+    color: var(--accent2);
+}
+
+.tree-node-horizontal:hover .node-icon-wrapper {
+    transform: rotate(45deg) scale(1.1);
+}
+
+.node-current:hover .node-icon-wrapper {
+    transform: rotate(45deg) scale(1.2);
+}
+
+/* --- BOTTOM SIDE: Codex --- */
+.tree-codex-horizontal {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 4rem;
+    background: rgba(0, 0, 0, 0.4);
+    gap: 3rem;
+}
+
+.codex-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.codex-level-badge {
+    font-family: 'Agency FB', sans-serif;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: var(--accent1);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: rgba(190, 38, 110, 0.15);
+    padding: 6px 16px;
+    border-radius: 20px;
+    margin-bottom: 1.5rem;
+}
+
+.codex-title {
+    font-size: 3.5rem;
+    color: white;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    line-height: 1;
+    font-family: "Agency FB", serif;
+}
+
+.initiate-btn {
+    padding: 1rem 3rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--accent1);
+    color: white;
+    font-family: 'Agency FB', sans-serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+}
+
+.initiate-btn:hover {
+    background: linear-gradient(90deg, var(--accent1), var(--accent2));
+    border-color: transparent;
+    box-shadow: 0 5px 20px rgba(190, 38, 110, 0.4);
+}
+
+.codex-right {
+    flex: 1.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    padding-left: 3rem;
+}
+
+.perks-heading {
+    font-family: 'Agency FB', sans-serif;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+}
+
+/* Puts the perks into a neat 2-column grid to use the widescreen space */
+.perks-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.perk-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    color: #e0e0e0;
+    font-family: 'Agency FB', sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.4;
+}
+
+.perk-bullet {
+    font-size: 1.2rem !important;
+    color: var(--accent1);
+    margin-top: 2px;
+}
+
+.inherited-perks-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 1.5rem;
+    padding: 12px 20px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px dashed rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    color: rgba(255, 255, 255, 0.6);
+    font-family: 'Agency FB', sans-serif;
+    font-size: 1rem;
+    width: fit-content;
+}
+
+.inherited-perks-badge .material-icons {
+    font-size: 1.2rem;
+    color: var(--accent2);
+}
+
+/* Responsiveness */
+@media (max-width: 900px) {
+    .tree-codex-horizontal {
+        flex-direction: column;
+        padding: 2rem;
+        gap: 2rem;
+    }
+
+    .codex-right {
+        border-left: none;
+        padding-left: 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 2rem;
+    }
+
+    .perks-list {
+        grid-template-columns: 1fr;
+    }
+
+    .node-amount {
+        font-size: 1rem;
+        top: -35px;
+    }
+
+    .node-name {
+        font-size: 1rem;
+        bottom: -50px;
+        white-space: normal;
+        width: 100px;
+    }
+}
