@@ -40,7 +40,6 @@ const Eventcard = ({ Eventdata, Eventday }) => {
     }
     setexpand(idx);
   };
-  console.log("Mee");
   return (
     <div className="event-card-container">
       <div className="section-event">
@@ -56,21 +55,6 @@ const Eventcard = ({ Eventdata, Eventday }) => {
             />
           ))}
         </div>
-      </div>
-      {/* Prev / Next Navigation */}
-      <div className="timeline__nav">
-        <button className="timeline__nav-btn">
-          <span className="timeline__nav-icon">
-            <img src="/assets/icons/arrow-left.svg" alt="" />
-          </span>
-          prev
-        </button>
-        <button className="timeline__nav-btn">
-          next
-          <span className="timeline__nav-icon">
-            <img src="/assets/icons/arrow-right.svg" alt="" />
-          </span>
-        </button>
       </div>
     </div>
   );

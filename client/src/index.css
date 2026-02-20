@@ -7,14 +7,12 @@
 	/* line-height: 1.5; */
 
 	color-scheme: light dark;
-	/* color: rgba(255, 255, 255, 0.5); */
-	/* background-color: #171717; */
 
 	--accent1: #ff3593;
 	--accent2: #7e34ff;
 
 	--primary: var(--accent1);
-	--app-background: #0F1214;
+	--app-background: #000000;
 
 	--body-font: 'Delius Swash Caps', serif;
 	--display-font: 'Kaushan Script', cursive;
@@ -63,7 +61,7 @@ body {
 	justify-content: center;
 	min-width: 320px;
 	min-height: 100vh;
-	background-color: var(--app-background) ;
+	/* background-color: var(--app-background) ; */
 }
 
 h1 {
