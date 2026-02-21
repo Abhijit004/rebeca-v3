@@ -4,7 +4,7 @@ import ResponsiveDrawer from "./ResponsiveDrawer";
 import { Link, NavLink } from "react-router-dom";
 import "./Navbar.css";
 import { useAuth } from "../../AuthContext";
-import AccountMenu from "../AccountMenu/AccountMenu";
+// import AccountMenu from "../AccountMenu/AccountMenu";
 import MenuIcon from "@mui/icons-material/Menu";
 
 const Navbar = () => {

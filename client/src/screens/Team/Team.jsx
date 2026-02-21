@@ -16,7 +16,7 @@ import {
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import CustomAvatar from "../../components/CustomAvatar/CustomAvatar";
 import { useAuth } from "../../AuthContext";
-import { skeleton } from "../../AuthContext";
+import { teamIcons } from "../../AuthContext";
 import { East, Favorite } from "@mui/icons-material";
 
 const profs = [
@@ -64,7 +64,7 @@ function ProfessorsList() {
                         title={professor.name}
                         src={professor.img}
                         subtitle={professor.position}
-                        icon={skeleton[0].icon}
+                        icon={teamIcons["Secretary General"]}
                     />
                 );
             })}
@@ -82,7 +82,7 @@ const Team = () => {
     //             const res = await getAllAdmins();
     //             const admins = res.data?.data;
     //             console.log(admins);
-    //             const nteamsData = JSON.parse(JSON.stringify(skeleton));
+    //             const nteamsData = JSON.parse(JSON.stringify(teamIcons));
     //             admins.map((admin) => {
     //                 var index = teamNameToId[admin.team];
     //                 nteamsData[index - 1]?.members.push(admin);
@@ -129,8 +129,6 @@ const Team = () => {
                 <Container className="team-container">
                     {allTeams.map((teamData, i) => {
                         if (teamData.members.length === 0) return;
-                        console.log(teamData);
-
                         return (
                             <Accordion
                                 sx={{ m: 0, p: 0 }}
@@ -145,7 +143,7 @@ const Team = () => {
                                     id="panel1-header"
                                 >
                                     <div className="accordion-h">
-                                        <div>{skeleton[i].icon}</div>
+                                        <div>{teamIcons[teamData.team]}</div>
                                         {teamData.team}
                                     </div>
                                 </AccordionSummary>
@@ -167,7 +165,7 @@ const Team = () => {
                                                     src={member.img}
                                                     // subtitle={member.tagline}
                                                     phone={member.phone}
-                                                    icon={skeleton[i].icon}
+                                                    icon={teamIcons[teamData.team]}
                                                     key={ki}
                                                 />
                                             );

@@ -6,9 +6,18 @@
     color: #fff;
     position: relative;
     padding: 3rem 1rem;
-    /* background: url("/assets/Home/instruo-plane.svg") no-repeat top;
-    background-size: contain; */
-    /* max-width: 1200px; */
+    background: 
+    linear-gradient(
+        to bottom, 
+        rgba(0, 0, 0, 0.8) 0%,    /* Dark at the very top */
+        transparent 100%,          /* Clear in the upper-middle */
+        transparent 100%,          /* Clear in the lower-middle */
+        rgba(0, 0, 0, 0.8) 100%   /* Dark at the very bottom */
+    ),
+    url("/assets/imgs/home/countdown-img.png") no-repeat top;
+    background-size: cover;
+    width: 100%;
+    min-height: 80vh;
 }
 
 .timer * {
@@ -23,6 +32,14 @@
     transform: translateX(-50%); */
     z-index: 0;
     animation: PlaneFloat 6s ease-in-out infinite;
+}
+
+.timer .heading {
+    font-family: var(--display-font);
+    width: 100%;
+    text-align: center;
+    font-size: 4rem;
+    color: #ffffff94;
 }
 
 .timer .plane img {
@@ -40,24 +57,27 @@
 
 .timer .countdown .box {
     width: 180px;
-    background-color: hsla(0, 0%, 100%, 0.20);
+    background-color: hsla(0, 0%, 100%, 0.091);
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     padding: 0.4rem 0.7rem;
+    padding-top: 0;;
     gap: 0.2rem;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
 }
 
 .timer .countdown .box .time {
-    font-family: 'Michroma', sans-serif;
+    font-family: var(--display-font);
     font-size: 5rem;
 }
 
 .timer .countdown .box .label {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--display-font);
     font-size: 1.2rem;
-    color: var(--offwhite);
+    color: #ffffff8e;
 }
 
 

@@ -3,6 +3,7 @@ import "./Schedule.css";
 import Eventcard from "../../components/Eventcard/Eventcard";
 import Events from "../../assets/data/events.json";
 import Heading from "../../components/Headingv2/Headingv2";
+import { useAuth } from "../../AuthContext";
 
 /* ───── Static Data ───── */
 
@@ -15,41 +16,6 @@ const DAYS = [
     { key: "navami", label: "NAVAMI" },
     { key: "dashami", label: "DASHAMI" },
 ];
-
-// Placeholder event data for layout structure
-const PLACEHOLDER_EVENTS = [
-    { name: "inaugration", featured: true, icon: "/assets/icons/external-link.svg" },
-    { name: "Saturnwalia", featured: false, icon: "/assets/icons/rotate.svg" },
-    { name: "inaugration", featured: false, icon: "/assets/icons/rotate.svg" },
-    { name: "Arrival", featured: false, icon: "/assets/icons/rotate.svg" },
-    { name: "Arrival", featured: false, icon: "/assets/icons/rotate.svg" },
-    { name: "Arrival", featured: false, icon: "/assets/icons/rotate.svg" },
-    { name: "Arrival", featured: false, icon: "/assets/icons/rotate.svg" },
-    { name: "Arrival", featured: false, icon: "/assets/icons/rotate.svg" },
-    { name: "Arrival", featured: false, icon: "/assets/icons/rotate.svg" },
-    { name: "Typists Journey", featured: false, icon: "/assets/icons/rotate.svg" },
-    { name: "Verse Wars", featured: true, icon: "/assets/icons/external-link.svg" },
-    { name: "inaugration", featured: false, icon: "/assets/icons/rotate.svg" },
-    { name: "inaugration", featured: false, icon: "/assets/icons/rotate.svg" },
-    { name: "inaugration", featured: false, icon: "/assets/icons/rotate.svg" },
-    { name: "inaugration", featured: false, icon: "/assets/icons/rotate.svg" },
-    { name: "inaugration", featured: false, icon: "/assets/icons/rotate.svg" },
-    { name: "inaugration", featured: false, icon: "/assets/icons/rotate.svg" },
-    { name: "inaugration", featured: false, icon: "/assets/icons/rotate.svg" },
-    { name: "inaugration", featured: false, icon: "/assets/icons/rotate.svg" },
-    { name: "inaugration", featured: false, icon: "/assets/icons/rotate.svg" },
-    { name: "inaugration", featured: false, icon: "/assets/icons/rotate.svg" },
-    { name: "inaugration", featured: false, icon: "/assets/icons/rotate.svg" },
-];
-
-const eventDataByDay = {
-    saptami: Events.saptami,
-    ashtami: Events.ashtami,
-    navami: Events.navami,
-    dashami: Events.dashami,
-};
-
-/* ───── Sub-Components ───── */
 
 /**
  * Renders a single placeholder event card.
@@ -68,6 +34,7 @@ const EventCardPlaceholder = ({ event }) => (
  * Renders one day section with title, time labels, and placeholder event cards.
  */
 const DaySection = ({ day, showDecorativeArrow }) => {
+    const {allEventsByDay} = useAuth()    
     return (
         <>
             <section className="day-section">
@@ -80,7 +47,7 @@ const DaySection = ({ day, showDecorativeArrow }) => {
                 <div className="day-section__timeline">
                     {/* Placeholder event cards - to be replaced with actual cards later */}
                     <div className="timeline__events-container">
-                        <Eventcard Eventdata={eventDataByDay[day.key].eventList} Eventday={day.label} />
+                        <Eventcard Eventdata={allEventsByDay[day.key]} Eventday={day.label} />
                     </div>
                 </div>
             </section>

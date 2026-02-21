@@ -24,41 +24,70 @@ const AuthContext = createContext();
 import { loginWithGoogle, logoutUser, checkAuthStatus, getAllEvents, getAllTeams } from "./services/api";
 import { googleLogout } from "@react-oauth/google";
 
-export const skeleton = [
-    { id: 1, team: "Secretary General", members: [], icon: <AdminPanelSettings /> },
-    { id: 2, team: "Finance", members: [], icon: <AttachMoney /> },
-    { id: 3, team: "Cultural", members: [], icon: <Palette /> },
-    { id: 4, team: "Event", members: [], icon: <Event /> },
-    { id: 5, team: "Resource Information", members: [], icon: <Info /> },
-    { id: 6, team: "Travel & Logistics", members: [], icon: <DirectionsBus /> },
-    { id: 7, team: "Sponsorship", members: [], icon: <Handshake /> },
-    { id: 8, team: "Publication", members: [], icon: <Article /> },
-    { id: 9, team: "Publicity", members: [], icon: <Campaign /> },
-    { id: 10, team: "Stage Decoration", members: [], icon: <Brush /> },
-    { id: 11, team: "Business & Alumni Meet", members: [], icon: <Groups /> },
-    { id: 12, team: "Competition and Seminars", members: [], icon: <Code /> },
-    { id: 13, team: "Web Development", members: [], icon: <Code /> },
-    { id: 14, team: "Refreshments", members: [], icon: <Restaurant /> },
-    { id: 15, team: "Volunteers", members: [], icon: <VolunteerActivism /> },
-    { id: 16, team: "Photography", members: [], icon: <CameraAlt /> },
-    { id: 17, team: "Joint Secretary", members: [], icon: <AssignmentInd /> },
-    { id: 18, team: "Fixed Signatory", members: [], icon: <AccountBalance /> },
-    { id: 19, team: "BECA Magazine", members: [], icon: <MenuBook /> },
-];
+export const teamIcons = {
+    "Secretary General": <AdminPanelSettings />,
+    "Finance": <AttachMoney />,
+    "Cultural": <Palette />,
+    "Events": <Event />,
+    "Resource Information": <Info />,
+    "Travel and Logistics": <DirectionsBus />,
+    "Sponsorship": <Handshake />,
+    "Publication": <Article />,
+    "Publicity": <Campaign />,
+    "Stage Decoration": <Brush />,
+    "Business and Alumni Meet": <Groups />,
+    "Competition and Seminars": <Code />,
+    "Web Development": <Code />,
+    "Refreshments": <Restaurant />,
+    "Stage and Campus Decorations": <VolunteerActivism />,
+    "Volunteers": <VolunteerActivism />,
+    "Photography": <CameraAlt />,
+    "Joint Secretary": <AssignmentInd />,
+    "Fixed Signatory": <AccountBalance />,
+    "BECA Magazine": <MenuBook />,
+};
 
 export const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
     const [userLoad, setUserLoad] = useState(false);
     const [allEvents, setAllEvents] = useState([]);
+    const [allEventsByDay, setAllEventsByDay] = useState({saptami: [], ashtami: [], navami: [], dashami: []});
     const [allTeams, setAllTeams] = useState([]);
-    const [teamsData, setTeamsData] = useState(skeleton);
+    const [teamsData, setTeamsData] = useState({});
     const { Notification, showNotification } = useNotification();
+
+    const handlesetEventsByDay = (e) => {
+        const grouped = {
+            saptami: [],   // March 19
+            ashtami: [],   // March 20
+            navami: [],    // March 21
+            dashami: []    // March 22
+        };
+        
+        e.forEach(event => {
+            const date = new Date(event.startTime);
+            const day = date.getDate();
+            
+            if (day === 19) {
+                grouped.saptami.push(event);
+            } else if (day === 20) {
+                grouped.ashtami.push(event);
+            } else if (day === 21) {
+                grouped.navami.push(event);
+            } else if (day === 22) {
+                grouped.dashami.push(event);
+            }
+        });
+        
+        setAllEventsByDay(grouped);
+    }
 
     useEffect(() => {
         // load events
         try {
             const e = getAllEvents();
             setAllEvents(e);
+            handlesetEventsByDay(e)
             const t = getAllTeams();
             setAllTeams(t);
         } catch (err) {
@@ -89,10 +118,11 @@ export const AuthProvider = ({ children }) => {
                 setUserLoad(false);
             }
         };
-
-        initAuth();
-        console.log("What we set as user:")
-        console.log(user)
+        
+        // need to umcomment this for google login
+        // initAuth();
+        // console.log("What we set as user:")
+        // console.log(user)
     }, []);
 
     const handleLoginSuccess = async (response) => {
@@ -134,7 +164,8 @@ export const AuthProvider = ({ children }) => {
                 setAllTeams,
                 userLoad,
                 setUserLoad,
-                showNotification
+                showNotification,
+                allEventsByDay
             }}
         >
             <Notification />

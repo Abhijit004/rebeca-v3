@@ -1,63 +1,62 @@
 import { React, useState, useEffect } from "react";
 import "./Eventcard.css";
 import { Link, useNavigate } from "react-router-dom";
-import LaunchIcon from '@mui/icons-material/Launch';
+import LaunchIcon from "@mui/icons-material/Launch";
 
 const Eventpanel = ({ value, index, day, show, handle }) => {
-  return (
-    <div key={index} className={`event-data ${show && "expand"}`}>
-      <div className="data-body">
-        <div className="img">
-          <img src="/assets/imgs/Schedule/images.png" alt="event-icon" />
-        </div>
-        {show && (
-            <div className="desc">{value?.desc}
-            {/* <Link to={`/events/` + value?.slug}>
+    return (
+        <div key={index} className={`event-data ${show && "expand"}`}>
+            <div className="data-body">
+                <div className="img">
+                    <img src="/assets/imgs/Schedule/images.png" alt="event-icon" />
+                </div>
+                {show && (
+                    <div className="desc">
+                        {value?.desc}
+                        {/* <Link to={`/events/` + value?.slug}>
               <Button variant={"filled"} innerText={"Learn more"}></Button>
               </Link> */}
+                    </div>
+                )}
             </div>
-        )}
-      </div>
-      <div onClick={() => handle(index)} className="data-header">
-        <div>{value?.eventName}{" "}
-          { show &&
-            <LaunchIcon />
-          }
+            <div onClick={() => handle(index)} className="data-header">
+                <div>
+                    {value?.name} {show && <LaunchIcon />}
+                </div>
+                <p>{value.startTime?.split("T")[1].substring(0, 5)}</p>
+                
+            </div>
         </div>
-        <p>12:00PM</p>
-      </div>
-
-    </div>
-  );
+    );
 };
 
-const Eventcard = ({ Eventdata, Eventday }) => {
-  const [expand, setexpand] = useState(0);
-  const navigate = useNavigate();
-  const handleExpand = (idx) => {
-    if (idx === expand) {
-      navigate(`/events/` + Eventdata[idx]?.url);
-    }
-    setexpand(idx);
-  };
-  return (
-    <div className="event-card-container">
-      <div className="section-event">
-        <div className="event-card">
-          {Eventdata.map((value, index) => (
-            <Eventpanel
-              key={index}
-              value={value}
-              day={Eventday}
-              index={index}
-              show={expand === index}
-              handle={handleExpand}
-            />
-          ))}
+const Eventcard = ({ Eventdata, Eventday }) => {    
+    const [expand, setexpand] = useState(0);
+    const navigate = useNavigate();
+    const handleExpand = (idx) => {
+        if (idx === expand) {
+            navigate(`/events/` + Eventdata[idx].slug);
+        }
+        setexpand(idx);
+    };
+    return (
+        <div className="event-card-container">
+            <div className="section-event">
+                <div className="event-card">
+                    {Eventdata.map((value, index) => (
+                        <Eventpanel
+                            key={index}
+                            value={value}
+                            day={Eventday}
+                            index={index}
+                            show={expand === index}
+                            handle={handleExpand}
+                        />
+                    ))}
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  );
+    );
 };
 
 export default Eventcard;

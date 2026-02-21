@@ -7,7 +7,6 @@ import { extractFullDate, extractTime } from "../../components/EventList/EventLi
 import RoundCard from "./RoundCard";
 import { Alert } from "@mui/material";
 import { Warning } from "@mui/icons-material";
-import { isUserRegistered } from "../../services/eventApi";
 import CustomAvatar from "../../components/CustomAvatar/CustomAvatar";
 import PageNotFound from "../PageNotFound/PageNotFound";
 
@@ -26,7 +25,6 @@ const EventSingle = () => {
     const [isReg, setIsReg] = useState(false);
     const [loading, setLoading] = useState(false);
     const oneEvent = allEvents.find((ev) => ev.slug === eventSlug);
-    console.log(oneEvent);
 
     useEffect(() => {
         const checkReg = async () => {
@@ -60,7 +58,7 @@ const EventSingle = () => {
     }
 
     return (
-        <div className="event-single-container">
+        allEvents && <div className="event-single-container">
             {/* Background Image with Overlay */}
             <div
                 className="event-single-banner"
@@ -75,18 +73,18 @@ const EventSingle = () => {
             >
                 <div className="event-single-overlay">
                     <div className="eposter">
-                        <div className="regfee">Fee ₹ {oneEvent.registrationFee}</div>
+                        <div className="regfee">Fee ₹ {oneEvent.regfee}</div>
                         <img src={oneEvent.poster} alt={"Poster"} />
                     </div>
                     <div className="event-single-header">
                         <span className="event-single-badge">{oneEvent?.type}</span>
-                        <h1 className="event-single-title">{oneEvent?.eventName}</h1>
-                        <p className="event-single-subtitle">
+                        <h1 className="event-single-title">{oneEvent?.name}</h1>
+                        {/* <p className="event-single-subtitle">
                             {extractFullDate(oneEvent?.rounds[0]?.startTime, true)} to{" "}
                             {extractFullDate(oneEvent?.rounds[0]?.endTime, true)}
-                        </p>
+                        </p> */}
                         <div className="eposter-mobile">
-                            <div className="regfee">Fee ₹ {oneEvent.registrationFee}</div>
+                            <div className="regfee">Fee ₹ {oneEvent.regfee}</div>
                             <img src={oneEvent.poster} alt={"Poster"} />
                         </div>
                     </div>
@@ -148,19 +146,19 @@ const EventSingle = () => {
                             This event accepts registration only through <b>google forms</b>.
                         </Alert>
                     )} */}
-                    <Alert className="event-alert" variant="outlined" severity="info" color="info" sx={{ mt: 1 }}>
+                    {/* <Alert className="event-alert" variant="outlined" severity="info" color="info" sx={{ mt: 1 }}>
                         Event has concluded.
-                    </Alert>
+                    </Alert> */}
                 </div>
             </div>
 
             {/* Content Below */}
             <div className="event-single-content">
-                <p className="event-single-description">{oneEvent.description}</p>
-                <h2 className="schedule-title">Schedule</h2>
+                <p className="event-single-description">{oneEvent.desc}</p>
+                {oneEvent.rounds && <h2 className="schedule-title">Schedule</h2>}
 
                 <div className="prelims-container">
-                    {oneEvent?.rounds.map((round, i) => {
+                    {oneEvent?.rounds?.map((round, i) => {
                         return (
                             <RoundCard
                                 name={round.roundname || `Round ${i + 1}`}
@@ -179,7 +177,7 @@ const EventSingle = () => {
             <div className="coordinators event-single-content" style={{ paddingTop: 0 }}>
                 <h2 className="schedule-title">Coordinators</h2>
                 <div className="coords-list">
-                    {oneEvent.mainCoordinators.map((e, i) => {
+                    {oneEvent.coords.map((e, i) => {
                         console.log("coordinator");
                         console.log(e);
                         return <CustomAvatar title={e.name} subtitle={e.role} phone={e.phone} src={e.image} key={i} />;

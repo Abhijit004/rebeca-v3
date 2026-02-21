@@ -41,6 +41,7 @@ const CountDown = () => {
 
     return (
         <section className="timer">
+            <div className="heading">T-Minus to Launch</div>
             <div className="countdown">
                 <Box time={String(timeLeft.days).padStart(2, '0')} label="DAYS" />
                 <Box time={String(timeLeft.hours).padStart(2, '0')} label="HOURS" />

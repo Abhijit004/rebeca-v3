@@ -152,7 +152,7 @@ const SponsorSkillTree = () => {
             <div className="codex-left">
               <div className="codex-level-badge">Level 0{displayLevel} Unlocked</div>
               <h2 className="display-font codex-title">{activeTierDetails.name}</h2>
-              <button className="initiate-btn">SELECT TIER</button>
+              {/* <button className="initiate-btn">SELECT TIER</button> */}
             </div>
             
             <div className="codex-right">

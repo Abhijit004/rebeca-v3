@@ -1,28 +1,7 @@
 [
     {
-        "name": "HackOverflow 2026",
-        "desc": "A 36-hour intense hackathon solving real-world problems.",
-        "type": "team",
-        "minTeamSize": 2,
-        "maxTeamSize": 5,
-        "registration": "Open",
-        "poster": "https://placehold.co/600x400.jpg",
-        "thumbnail": "https://placehold.co/150x150.jpg",
-        "regfee": 500,
-        "coords": ["507f1f77bcf86cd799439011", "507f1f77bcf86cd799439012"]
-    },
-    {
-        "name": "Code Wars",
-        "desc": "Competitive programming contest for algorithm enthusiasts.",
-        "type": "single",
-        "registration": "Open",
-        "poster": "https://placehold.co/600x400.png",
-        "thumbnail": "https://placehold.co/150x150.png",
-        "regfee": 100,
-        "coords": ["507f1f77bcf86cd799439013"]
-    },
-    {
         "name": "Robo Soccer",
+        "slug": "robo-soccer",
         "desc": "Build a bot that can play soccer and score goals.",
         "type": "team",
         "minTeamSize": 2,
@@ -31,10 +10,21 @@
         "poster": "https://placehold.co/600x400.jpg",
         "thumbnail": "https://placehold.co/150x150.jpg",
         "regfee": 800,
-        "coords": ["507f1f77bcf86cd799439014"]
+        "coords": [
+            {
+                "name": "Aritra Dutta",
+                "num": "+91 78659 79275"
+            },
+            {
+                "name": "Swastika Ghosh",
+                "num": "+91 86498 09402"
+            }
+        ],
+        "startTime": "2026-03-19T10:00:00"
     },
     {
         "name": "Capture The Flag",
+        "slug": "capture-the-flag",
         "desc": "Cybersecurity challenge. Find the vulnerabilities and capture flags.",
         "type": "team",
         "minTeamSize": 2,
@@ -43,10 +33,21 @@
         "poster": "https://placehold.co/600x400.jpg",
         "thumbnail": "https://placehold.co/150x150.jpg",
         "regfee": 300,
-        "coords": ["507f1f77bcf86cd799439015"]
+        "coords": [
+            {
+                "name": "Aritra Dutta",
+                "num": "+91 78659 79275"
+            },
+            {
+                "name": "Swastika Ghosh",
+                "num": "+91 86498 09402"
+            }
+        ],
+        "startTime": "2026-03-19T11:30:00"
     },
     {
         "name": "Line Follower",
+        "slug": "line-follower",
         "desc": "Autonomous robot race on a black line track.",
         "type": "team",
         "minTeamSize": 2,
@@ -55,10 +56,21 @@
         "poster": "https://placehold.co/600x400.jpg",
         "thumbnail": "https://placehold.co/150x150.jpg",
         "regfee": 400,
-        "coords": ["507f1f77bcf86cd799439016"]
+        "coords": [
+            {
+                "name": "Aritra Dutta",
+                "num": "+91 78659 79275"
+            },
+            {
+                "name": "Swastika Ghosh",
+                "num": "+91 86498 09402"
+            }
+        ],
+        "startTime": "2026-03-19T13:00:00"
     },
     {
         "name": "Valorant Showdown",
+        "slug": "valorant-showdown",
         "desc": "5v5 Tactical Shooter Tournament.",
         "type": "team",
         "minTeamSize": 5,
@@ -67,20 +79,42 @@
         "poster": "https://placehold.co/600x400.jpg",
         "thumbnail": "https://placehold.co/150x150.jpg",
         "regfee": 1000,
-        "coords": ["507f1f77bcf86cd799439017"]
+        "coords": [
+            {
+                "name": "Aritra Dutta",
+                "num": "+91 78659 79275"
+            },
+            {
+                "name": "Swastika Ghosh",
+                "num": "+91 86498 09402"
+            }
+        ],
+        "startTime": "2026-03-19T14:30:00"
     },
     {
         "name": "FIFA 26 Championship",
+        "slug": "fifa-26-championship",
         "desc": "1v1 Console Gaming Tournament.",
         "type": "single",
         "registration": "Open",
         "poster": "https://placehold.co/600x400.jpg",
         "thumbnail": "https://placehold.co/150x150.jpg",
         "regfee": 200,
-        "coords": ["507f1f77bcf86cd799439018"]
+        "coords": [
+            {
+                "name": "Aritra Dutta",
+                "num": "+91 78659 79275"
+            },
+            {
+                "name": "Swastika Ghosh",
+                "num": "+91 86498 09402"
+            }
+        ],
+        "startTime": "2026-03-19T16:00:00"
     },
     {
         "name": "Battle of Bands",
+        "slug": "battle-of-bands",
         "desc": "Rock out with your band and win the ultimate title.",
         "type": "team",
         "minTeamSize": 3,
@@ -89,20 +123,42 @@
         "poster": "https://placehold.co/600x400.jpg",
         "thumbnail": "https://placehold.co/150x150.jpg",
         "regfee": 1500,
-        "coords": ["507f1f77bcf86cd799439019"]
+        "coords": [
+            {
+                "name": "Aritra Dutta",
+                "num": "+91 78659 79275"
+            },
+            {
+                "name": "Swastika Ghosh",
+                "num": "+91 86498 09402"
+            }
+        ],
+        "startTime": "2026-03-19T18:00:00"
     },
     {
         "name": "Lensflare",
+        "slug": "lensflare",
         "desc": "Photography competition. Theme: Urban Jungle.",
         "type": "single",
         "registration": "Open",
         "poster": "https://placehold.co/600x400.jpg",
         "thumbnail": "https://placehold.co/150x150.jpg",
         "regfee": 100,
-        "coords": ["507f1f77bcf86cd799439020"]
+        "coords": [
+            {
+                "name": "Aritra Dutta",
+                "num": "+91 78659 79275"
+            },
+            {
+                "name": "Swastika Ghosh",
+                "num": "+91 86498 09402"
+            }
+        ],
+        "startTime": "2026-03-19T09:00:00"
     },
     {
         "name": "Tech Quiz",
+        "slug": "tech-quiz",
         "desc": "Test your technical knowledge and trivia skills.",
         "type": "team",
         "minTeamSize": 2,
@@ -111,10 +167,21 @@
         "poster": "https://placehold.co/600x400.jpg",
         "thumbnail": "https://placehold.co/150x150.jpg",
         "regfee": 150,
-        "coords": ["507f1f77bcf86cd799439021"]
+        "coords": [
+            {
+                "name": "Aritra Dutta",
+                "num": "+91 78659 79275"
+            },
+            {
+                "name": "Swastika Ghosh",
+                "num": "+91 86498 09402"
+            }
+        ],
+        "startTime": "2026-03-20T10:00:00"
     },
     {
         "name": "Debate Championship",
+        "slug": "debate-championship",
         "desc": "Asian Parliamentary Debate format.",
         "type": "team",
         "minTeamSize": 3,
@@ -123,20 +190,42 @@
         "poster": "https://placehold.co/600x400.jpg",
         "thumbnail": "https://placehold.co/150x150.jpg",
         "regfee": 300,
-        "coords": ["507f1f77bcf86cd799439022"]
+        "coords": [
+            {
+                "name": "Aritra Dutta",
+                "num": "+91 78659 79275"
+            },
+            {
+                "name": "Swastika Ghosh",
+                "num": "+91 86498 09402"
+            }
+        ],
+        "startTime": "2026-03-20T11:30:00"
     },
     {
         "name": "Solo Dance",
+        "slug": "solo-dance",
         "desc": "Showcase your moves. All styles allowed.",
         "type": "single",
         "registration": "Open",
         "poster": "https://placehold.co/600x400.jpg",
         "thumbnail": "https://placehold.co/150x150.jpg",
         "regfee": 200,
-        "coords": ["507f1f77bcf86cd799439023"]
+        "coords": [
+            {
+                "name": "Aritra Dutta",
+                "num": "+91 78659 79275"
+            },
+            {
+                "name": "Swastika Ghosh",
+                "num": "+91 86498 09402"
+            }
+        ],
+        "startTime": "2026-03-20T14:00:00"
     },
     {
         "name": "Treasure Hunt",
+        "slug": "treasure-hunt",
         "desc": "Solve clues across the campus to find the treasure.",
         "type": "team",
         "minTeamSize": 3,
@@ -145,20 +234,42 @@
         "poster": "https://placehold.co/600x400.jpg",
         "thumbnail": "https://placehold.co/150x150.jpg",
         "regfee": 250,
-        "coords": ["507f1f77bcf86cd799439024"]
+        "coords": [
+            {
+                "name": "Aritra Dutta",
+                "num": "+91 78659 79275"
+            },
+            {
+                "name": "Swastika Ghosh",
+                "num": "+91 86498 09402"
+            }
+        ],
+        "startTime": "2026-03-20T15:30:00"
     },
     {
         "name": "Web Weavers",
+        "slug": "web-weavers",
         "desc": "Frontend design challenge. Replicate the design.",
         "type": "single",
         "registration": "Open",
         "poster": "https://placehold.co/600x400.jpg",
         "thumbnail": "https://placehold.co/150x150.jpg",
         "regfee": 100,
-        "coords": ["507f1f77bcf86cd799439025"]
+        "coords": [
+            {
+                "name": "Aritra Dutta",
+                "num": "+91 78659 79275"
+            },
+            {
+                "name": "Swastika Ghosh",
+                "num": "+91 86498 09402"
+            }
+        ],
+        "startTime": "2026-03-20T09:00:00"
     },
     {
         "name": "Circuitrix",
+        "slug": "circuitrix",
         "desc": "Design and debug complex electronic circuits.",
         "type": "team",
         "minTeamSize": 2,
@@ -167,10 +278,21 @@
         "poster": "https://placehold.co/600x400.jpg",
         "thumbnail": "https://placehold.co/150x150.jpg",
         "regfee": 200,
-        "coords": ["507f1f77bcf86cd799439026"]
+        "coords": [
+            {
+                "name": "Aritra Dutta",
+                "num": "+91 78659 79275"
+            },
+            {
+                "name": "Swastika Ghosh",
+                "num": "+91 86498 09402"
+            }
+        ],
+        "startTime": "2026-03-20T12:00:00"
     },
     {
         "name": "Bridge Builder",
+        "slug": "bridge-builder",
         "desc": "Construct the strongest bridge using popsicle sticks.",
         "type": "team",
         "minTeamSize": 3,
@@ -179,20 +301,42 @@
         "poster": "https://placehold.co/600x400.jpg",
         "thumbnail": "https://placehold.co/150x150.jpg",
         "regfee": 150,
-        "coords": ["507f1f77bcf86cd799439027"]
+        "coords": [
+            {
+                "name": "Aritra Dutta",
+                "num": "+91 78659 79275"
+            },
+            {
+                "name": "Swastika Ghosh",
+                "num": "+91 86498 09402"
+            }
+        ],
+        "startTime": "2026-03-20T16:30:00"
     },
     {
         "name": "Chess Masters",
+        "slug": "chess-masters",
         "desc": "Rapid fire chess tournament.",
         "type": "single",
         "registration": "Open",
         "poster": "https://placehold.co/600x400.jpg",
         "thumbnail": "https://placehold.co/150x150.jpg",
         "regfee": 100,
-        "coords": ["507f1f77bcf86cd799439028"]
+        "coords": [
+            {
+                "name": "Aritra Dutta",
+                "num": "+91 78659 79275"
+            },
+            {
+                "name": "Swastika Ghosh",
+                "num": "+91 86498 09402"
+            }
+        ],
+        "startTime": "2026-03-21T10:00:00"
     },
     {
         "name": "Shark Tank",
+        "slug": "shark-tank",
         "desc": "Pitch your startup idea to investors.",
         "type": "team",
         "minTeamSize": 1,
@@ -201,20 +345,42 @@
         "poster": "https://placehold.co/600x400.jpg",
         "thumbnail": "https://placehold.co/150x150.jpg",
         "regfee": 500,
-        "coords": ["507f1f77bcf86cd799439029"]
+        "coords": [
+            {
+                "name": "Aritra Dutta",
+                "num": "+91 78659 79275"
+            },
+            {
+                "name": "Swastika Ghosh",
+                "num": "+91 86498 09402"
+            }
+        ],
+        "startTime": "2026-03-21T11:30:00"
     },
     {
         "name": "Open Mic",
+        "slug": "open-mic",
         "desc": "Poetry, Stand-up, Storytelling. The stage is yours.",
         "type": "single",
         "registration": "On Spot",
         "poster": "https://placehold.co/600x400.jpg",
         "thumbnail": "https://placehold.co/150x150.jpg",
         "regfee": 50,
-        "coords": ["507f1f77bcf86cd799439030"]
+        "coords": [
+            {
+                "name": "Aritra Dutta",
+                "num": "+91 78659 79275"
+            },
+            {
+                "name": "Swastika Ghosh",
+                "num": "+91 86498 09402"
+            }
+        ],
+        "startTime": "2026-03-21T17:00:00"
     },
     {
         "name": "BGMI Squads",
+        "slug": "bgmi-squads",
         "desc": "Battle Royale Mobile Tournament.",
         "type": "team",
         "minTeamSize": 4,
@@ -223,20 +389,42 @@
         "poster": "https://placehold.co/600x400.jpg",
         "thumbnail": "https://placehold.co/150x150.jpg",
         "regfee": 400,
-        "coords": ["507f1f77bcf86cd799439031"]
+        "coords": [
+            {
+                "name": "Aritra Dutta",
+                "num": "+91 78659 79275"
+            },
+            {
+                "name": "Swastika Ghosh",
+                "num": "+91 86498 09402"
+            }
+        ],
+        "startTime": "2026-03-21T14:00:00"
     },
     {
         "name": "CAD Design",
+        "slug": "cad-design",
         "desc": "3D Modelling challenge for mechanical engineers.",
         "type": "single",
         "registration": "Open",
         "poster": "https://placehold.co/600x400.jpg",
         "thumbnail": "https://placehold.co/150x150.jpg",
         "regfee": 150,
-        "coords": ["507f1f77bcf86cd799439032"]
+        "coords": [
+            {
+                "name": "Aritra Dutta",
+                "num": "+91 78659 79275"
+            },
+            {
+                "name": "Swastika Ghosh",
+                "num": "+91 86498 09402"
+            }
+        ],
+        "startTime": "2026-03-21T09:00:00"
     },
     {
         "name": "Short Film Making",
+        "slug": "short-film-making",
         "desc": "Create a 5-minute short film on the theme 'Hope'.",
         "type": "team",
         "minTeamSize": 2,
@@ -245,20 +433,42 @@
         "poster": "https://placehold.co/600x400.jpg",
         "thumbnail": "https://placehold.co/150x150.jpg",
         "regfee": 600,
-        "coords": ["507f1f77bcf86cd799439033"]
+        "coords": [
+            {
+                "name": "Aritra Dutta",
+                "num": "+91 78659 79275"
+            },
+            {
+                "name": "Swastika Ghosh",
+                "num": "+91 86498 09402"
+            }
+        ],
+        "startTime": "2026-03-21T15:30:00"
     },
     {
         "name": "Math Olympiad",
+        "slug": "math-olympiad",
         "desc": "Advanced mathematics problem solving.",
         "type": "single",
         "registration": "Open",
         "poster": "https://placehold.co/600x400.jpg",
         "thumbnail": "https://placehold.co/150x150.jpg",
         "regfee": 100,
-        "coords": ["507f1f77bcf86cd799439034"]
+        "coords": [
+            {
+                "name": "Aritra Dutta",
+                "num": "+91 78659 79275"
+            },
+            {
+                "name": "Swastika Ghosh",
+                "num": "+91 86498 09402"
+            }
+        ],
+        "startTime": "2026-03-21T12:30:00"
     },
     {
         "name": "Paper Presentation",
+        "slug": "paper-presentation",
         "desc": "Present your research papers to a panel of judges.",
         "type": "team",
         "minTeamSize": 1,
@@ -267,10 +477,21 @@
         "poster": "https://placehold.co/600x400.jpg",
         "thumbnail": "https://placehold.co/150x150.jpg",
         "regfee": 200,
-        "coords": ["507f1f77bcf86cd799439035"]
+        "coords": [
+            {
+                "name": "Aritra Dutta",
+                "num": "+91 78659 79275"
+            },
+            {
+                "name": "Swastika Ghosh",
+                "num": "+91 86498 09402"
+            }
+        ],
+        "startTime": "2026-03-22T10:00:00"
     },
     {
         "name": "Street Play",
+        "slug": "street-play",
         "desc": "Nukkad Natak raising social awareness.",
         "type": "team",
         "minTeamSize": 8,
@@ -279,10 +500,21 @@
         "poster": "https://placehold.co/600x400.jpg",
         "thumbnail": "https://placehold.co/150x150.jpg",
         "regfee": 500,
-        "coords": ["507f1f77bcf86cd799439036"]
+        "coords": [
+            {
+                "name": "Aritra Dutta",
+                "num": "+91 78659 79275"
+            },
+            {
+                "name": "Swastika Ghosh",
+                "num": "+91 86498 09402"
+            }
+        ],
+        "startTime": "2026-03-22T11:30:00"
     },
     {
         "name": "Face Painting",
+        "slug": "face-painting",
         "desc": "Artistic face painting competition.",
         "type": "team",
         "minTeamSize": 2,
@@ -291,20 +523,42 @@
         "poster": "https://placehold.co/600x400.jpg",
         "thumbnail": "https://placehold.co/150x150.jpg",
         "regfee": 100,
-        "coords": ["507f1f77bcf86cd799439037"]
+        "coords": [
+            {
+                "name": "Aritra Dutta",
+                "num": "+91 78659 79275"
+            },
+            {
+                "name": "Swastika Ghosh",
+                "num": "+91 86498 09402"
+            }
+        ],
+        "startTime": "2026-03-22T13:00:00"
     },
     {
         "name": "Sudoku Challenge",
+        "slug": "sudoku-challenge",
         "desc": "Fastest fingers first Sudoku solving.",
         "type": "single",
         "registration": "On Spot",
         "poster": "https://placehold.co/600x400.jpg",
         "thumbnail": "https://placehold.co/150x150.jpg",
         "regfee": 50,
-        "coords": ["507f1f77bcf86cd799439038"]
+        "coords": [
+            {
+                "name": "Aritra Dutta",
+                "num": "+91 78659 79275"
+            },
+            {
+                "name": "Swastika Ghosh",
+                "num": "+91 86498 09402"
+            }
+        ],
+        "startTime": "2026-03-22T14:30:00"
     },
     {
         "name": "Data Datathon",
+        "slug": "data-datathon",
         "desc": "Analyze the dataset and predict the outcomes.",
         "type": "team",
         "minTeamSize": 2,
@@ -313,20 +567,42 @@
         "poster": "https://placehold.co/600x400.jpg",
         "thumbnail": "https://placehold.co/150x150.jpg",
         "regfee": 300,
-        "coords": ["507f1f77bcf86cd799439039"]
+        "coords": [
+            {
+                "name": "Aritra Dutta",
+                "num": "+91 78659 79275"
+            },
+            {
+                "name": "Swastika Ghosh",
+                "num": "+91 86498 09402"
+            }
+        ],
+        "startTime": "2026-03-22T09:00:00"
     },
     {
         "name": "Meme Making",
+        "slug": "meme-making",
         "desc": "Create the funniest meme on the given topic.",
         "type": "single",
         "registration": "Online",
         "poster": "https://placehold.co/600x400.jpg",
         "thumbnail": "https://placehold.co/150x150.jpg",
         "regfee": 0,
-        "coords": ["507f1f77bcf86cd799439040"]
+        "coords": [
+            {
+                "name": "Aritra Dutta",
+                "num": "+91 78659 79275"
+            },
+            {
+                "name": "Swastika Ghosh",
+                "num": "+91 86498 09402"
+            }
+        ],
+        "startTime": "2026-03-22T16:00:00"
     },
     {
         "name": "Fashion Show",
+        "slug": "fashion-show",
         "desc": "Walk the ramp with style and attitude.",
         "type": "team",
         "minTeamSize": 10,
@@ -335,6 +611,16 @@
         "poster": "https://placehold.co/600x400.jpg",
         "thumbnail": "https://placehold.co/150x150.jpg",
         "regfee": 2000,
-        "coords": ["507f1f77bcf86cd799439041"]
+        "coords": [
+            {
+                "name": "Aritra Dutta",
+                "num": "+91 78659 79275"
+            },
+            {
+                "name": "Swastika Ghosh",
+                "num": "+91 86498 09402"
+            }
+        ],
+        "startTime": "2026-03-22T18:00:00"
     }
 ]
