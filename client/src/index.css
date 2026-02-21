@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Metamorphous&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&family=Kaushan+Script&family=Vina+Sans&display=swap');
 :root {
 	font-optical-sizing: auto;
 	font-weight: 400;
@@ -8,14 +7,17 @@
 	/* line-height: 1.5; */
 
 	color-scheme: light dark;
-	/* color: rgba(255, 255, 255, 0.5); */
-	/* background-color: #171717; */
 
-	--accent1: #BE266E;
-	--accent2: #9B29CB;
+	--accent1: #ff3593;
+	--accent2: #7e34ff;
 
 	--primary: var(--accent1);
-	--app-background: #0F1214;
+	--app-background: #000000;
+
+	--body-font: 'Delius Swash Caps', serif;
+	--display-font: 'Kaushan Script', cursive;
+	--heading-font: 'Vina Sans', sans-serif;
+
 
 	font-synthesis: none;
 	text-rendering: optimizeLegibility;
@@ -33,7 +35,7 @@
 	outline: none;
 	border: none;
 	box-sizing: border-box;
-	font-family: "Agency FB", serif;
+	/* letter-spacing: 0.1em; */
 }
 
 .display-font {
@@ -46,11 +48,11 @@
 
 a {
 	font-weight: 500;
-	color: #646cff;
+	color: var(--accent2);
 	text-decoration: inherit;
 }
 a:hover {
-	color: #535bf2;
+	color: var(--accent2);
 }
 
 body {
@@ -59,8 +61,7 @@ body {
 	justify-content: center;
 	min-width: 320px;
 	min-height: 100vh;
-	background-color: var(--app-background) !important;
-	font-family: "Agency FB", serif;
+	/* background-color: var(--app-background) ; */
 }
 
 h1 {
@@ -86,7 +87,7 @@ h1 {
 ::-webkit-scrollbar-thumb {
   /* height: 5px !important; */
   border-radius: 10px;
-  background: var(--accent1);
+  background: var(--accent2);
   transition: 0.5s all;
 }
 ::-webkit-scrollbar-thumb:hover{

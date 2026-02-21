@@ -172,7 +172,7 @@
 .iconn {
     width: 2.5rem;
     height: 2.5rem;
-    fill: var(--accent1);
+    fill: var(--accent2);
     transition: all 0.3s ease;
 }
 

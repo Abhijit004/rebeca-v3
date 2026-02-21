@@ -1,100 +1,104 @@
-.schedule {
-    padding-top: 3rem;
-    font-size: 1rem;
+.schedule-page {
+    color: #fff;
     animation: fadeIn 0.5s linear forwards;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
 }
 
-.schedule .heading {
-    width: 100%;
+/* ---------- Hero Header ---------- */
+
+.schedule-header {
     position: relative;
-    /* border: 1px solid red; */
+    width: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
-.schedule .heading .event_bg {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 100vw;
-    height: 100%;
-    border: 0px solid yellow;
+    text-align: center;
     /* overflow: hidden; */
+}
+
+/* Background image layer */
+.schedule-header__bg {
+    position: absolute;
+    inset: 0;
     z-index: 0;
-    opacity: 100%;
-}
-.schedule .heading .event_bg img {
-    width: 100vw;
-    height: 100%;
-    object-fit: contain;
-    object-position: center;
-    opacity: 0.5;
 }
 
-.day-title {
-    font-family: "sedgwick ave display";
-    font-size: 4.5rem;
-    color: #fff;
-    margin: 0;
-    position: relative;
-    text-shadow: 0 0 4px rgba(0, 0, 0, 0.8);
-}
-
-.day-title::after {
-    content: attr(data-text); /* same text */
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-
-    font-family: inherit;
-    font-size: 4.5rem; /* a bit larger than the main text */
-    color: var(--primary); /* a darker or tinted color to simulate reflection */
-    transform: translate(15px, 15px); /* horizontal, vertical offset */
-    opacity: 0.6; /* partial transparency */
-}
-.Outer-div .one {
-    transition: all ease 0.2s;
-}
-.Outer-div .one:hover {
-    color: var(--primary);
-}
-.event_div::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
+.schedule-header__bg img {
     width: 100%;
     height: 100%;
-    background: rgba(15, 18, 20, 0.7);
-}
-.event_div * {
-    z-index: 0;
+    object-fit: cover;
+    object-position: center;
 }
 
-.data-intro {
-    font-size: 1.2rem !important;
-    font-weight: 400 !important;
-    text-shadow: 0 0 10px 2px #000;
-    line-height: 1.4em !important;
+/* Content on top of the hero image */
+.schedule-header__content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-@media only screen and (max-width: 970px) {
-    .event_div .day-section {
-        flex-direction: column;
-    }
+/* "EVENTS" title wrapper */
+.schedule-header__title-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+}
+/* Subtitle paragraph */
+.schedule-header__subtitle {
+    font-weight: 400;
+    color: #ffffff;
+    text-align: center;
+    padding-top: 1rem;
+    font-size: 1.3rem;
+    width: min(50rem, 100%);
+}
 
-    .day-title,
-    .day-title::after {
-        font-size: 3.5rem;
-    }
-    
-    .data-intro {
-        width: 100% !important;
+/* ---------- Day Sections Wrapper ---------- */
+
+.schedule-days {
+    padding: 2rem 0;
+}
+
+/* ---------- Single Day Section ---------- */
+
+.day-section {
+    padding: 3rem 2rem;
+    /* position: relative; */
+}
+
+.day-section__header {
+    margin: 2rem 0;
+}
+
+.day-section__timeline {
+    position: relative;
+}
+
+/* Event cards container - placeholder for future */
+.timeline__events-container {
+    margin-bottom: 1.5rem;
+    display: flex;
+    gap: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    /* justify-content: center; */
+    /* scrollbar-width: none; */
+}
+
+@media only screen and (max-width: 900px){
+    .timeline__events-container {
+        justify-content: center;
     }
 }
+
+
+

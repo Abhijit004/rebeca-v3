@@ -51,7 +51,7 @@ function ProfessorsList() {
                 margin: "0 2rem",
                 gap: 5,
                 borderRadius: "5px",
-                bgcolor: "hsla(237, 100%, 70%, 0.2)",
+                bgcolor: "#c234ff36",
                 display: "flex",
                 flexWrap: "wrap",
                 justifyContent: "center",
@@ -159,38 +159,12 @@ const Team = () => {
                                             borderRadius: "5px",
                                         }}
                                     >
-                                        {teamData.members.filter((member) => member.position==='Head').map((member, ki) => {
+                                        {teamData.members.map((member, ki) => {
                                             return (
                                                 <CustomAvatar
                                                     title={member.name}
-                                                    src={member.image}
-                                                    subtitle={member.position}
-                                                    phone={member.phone}
-                                                    icon={skeleton[i].icon}
-                                                    key={ki}
-                                                />
-                                            );
-                                        })}
-                                        
-                                        {teamData.members.filter((member) => member.position==='Associate Head').map((member, ki) => {
-                                            return (
-                                                <CustomAvatar
-                                                    title={member.name}
-                                                    src={member.image}
-                                                    subtitle={member.position}
-                                                    phone={member.phone}
-                                                    icon={skeleton[i].icon}
-                                                    key={ki}
-                                                />
-                                            );
-                                        })}
-                                        
-                                        {teamData.members.filter((member) => member.position==='Associate').map((member, ki) => {
-                                            return (
-                                                <CustomAvatar
-                                                    title={member.name}
-                                                    src={member.image}
-                                                    subtitle={member.position}
+                                                    src={member.img}
+                                                    // subtitle={member.tagline}
                                                     phone={member.phone}
                                                     icon={skeleton[i].icon}
                                                     key={ki}

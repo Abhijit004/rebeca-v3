@@ -1,0 +1,146 @@
+.schedule-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 20px;
+  background-color: transparent;
+}
+
+/* Tabs Row */
+.tabs-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 50px 0 60px 0;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.tab-item {
+  background: rgba(46, 20, 35, 0.9); /* Deep plum */
+  padding: 18px 28px;
+  cursor: pointer;
+  text-align: center;
+  transition: 0.3s ease-in-out;
+  min-width: 160px;
+  border-radius: 2px;
+}
+
+.tab-item.active {
+  background: linear-gradient(180deg, #e91e63 0%, #ad1457 100%);
+  transform: scale(1.05);
+}
+
+.day-label {
+  display: block;
+  font-weight: 800;
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+  color: #fff;
+}
+
+.event-label {
+  display: block;
+  font-size: 0.65rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.8);
+  margin-top: 4px;
+  text-transform: uppercase;
+}
+
+/* Content Viewport */
+.content-viewport {
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  justify-content: center;
+}
+
+.vignette-wrapper {
+  position: relative;
+  width: 100%;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.background-mask-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.4) blur(1px);
+  /* The "Mask group" effect from Figma */
+  mask-image: radial-gradient(circle, black 20%, transparent 80%);
+  -webkit-mask-image: radial-gradient(circle, black 20%, transparent 80%);
+}
+
+.text-overlay {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  width: 80%;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.text-overlay p {
+  font-size: 1.3rem;
+  line-height: 1.7;
+  color: #ffffff;
+  font-weight: 300;
+  text-shadow: 0 4px 15px rgba(0,0,0,0.8);
+  margin: 0;
+}
+
+.button-wrapper {
+  margin-top: 10px;
+}
+
+/* Mobile: 2 tabs per row + full responsive scaling */
+@media (max-width: 768px) {
+  .tabs-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Exactly 2 per row */
+    gap: 12px;
+    justify-content: center;
+    max-width: 340px;
+    margin: 30px auto 40px; /* Center it */
+  }
+  
+  .tab-item {
+    min-width: unset;
+    width: 100%;
+    padding: 14px 20px;
+    margin: 0; /* Reset any margins */
+  }
+  
+  .day-label {
+    font-size: 1.1rem;
+  }
+  
+  .event-label {
+    font-size: 0.6rem;
+  }
+  
+  .vignette-wrapper {
+    height: 45vh; /* Scales with viewport */
+    min-height: 280px;
+  }
+  
+  .text-overlay {
+    width: 90%;
+    gap: 15px;
+  }
+  
+  .text-overlay p {
+    font-size: 1.1rem;
+  }
+}

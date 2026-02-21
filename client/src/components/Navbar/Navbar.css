@@ -43,9 +43,8 @@
 .navbar .nav-items .item {
     transition: 0.25s all;
     cursor: pointer;
-    font-weight: 400;
 
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: var(--purple);
     color: rgb(255, 255, 255);
     position: relative;

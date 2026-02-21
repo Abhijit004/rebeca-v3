@@ -142,7 +142,7 @@ export default function AccountMenu() {
             onSuccess={handleSuccess}
             onError={() => console.error("Login Failed")}
             disabled={userLoad}
-            theme="filled_blue"
+            theme="filled_black"
             logo_alignment="center"
             shape="circle"
             text="signin"

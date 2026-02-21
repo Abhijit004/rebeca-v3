@@ -3,6 +3,8 @@
   padding: 0;
   box-sizing: border-box;
   width: 100%;
+  font-family: 'Delius Swash Caps', serif;
+
   /* width: min(100%, 1500px); */
 }
 .row{
@@ -19,7 +21,7 @@
 }
 .App{
   width: 100%;
-  overflow: hidden;
+  overflow: clip;
   /* display: flex;
   align-items: center;
   justify-content: center;

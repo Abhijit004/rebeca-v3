@@ -14,7 +14,7 @@ const CustomAvatar = ({ title, subtitle, src, phone, icon }) => {
                     <div
                         style={{
                             padding: "0.3rem",
-                            backgroundColor: "var(--primary)",
+                            backgroundColor: "var(--accent2)",
                             borderRadius: "50%",
                             width: "max-content",
                             height: "max-content",

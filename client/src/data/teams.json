@@ -1,238 +1,738 @@
 [
     {
         "id": 1,
-        "team": "Secretary General",
+        "team": "BECA Magazine",
         "members": [
-            { "name": "Ayush Tejaswi", "position": "Head", "img": "./assets/Team/ayush_tejaswi.webp" },
-            { "name": "Satish Kumar Gupta", "position": "Associate Head", "img": "./assets/Team/satish_gupta.webp" },
-            { "name": "Aaratrika Sarkar", "position": "Associate Head", "img": "./assets/Team/aaratrika_sarkar.webp" },
-            { "name": "Ishaan Sharma", "position": "Associate", "img": "./assets/Team/ishaan_sharma.webp" },
-            { "name": "Ananya Chatterjee", "position": "Associate", "img": "./assets/Team/ananya_chatterjee.webp" },
-            { "name": "Siddharth Malhotra", "position": "Associate", "img": "./assets/Team/siddharth_malhotra.webp" }
+            {
+                "img": "",
+                "name": "Amit Kiran Das ",
+                "tagline": "CURRENT RUNS THROUGH MY VEINS"
+            },
+            {
+                "img": "",
+                "name": "Anand Tiwari",
+                "tagline": "?"
+            },
+            {
+                "img": "",
+                "name": "Aratrika Das",
+                "tagline": "Too old for all this"
+            },
+            {
+                "img": "",
+                "name": "Barla Jhonny Anirudh ",
+                "tagline": "Beyond Boundaries, Beyond Beats."
+            },
+            {
+                "img": "",
+                "name": "Erikilla Ashish ",
+                "tagline": "Hyderabaddie "
+            },
+            {
+                "img": "",
+                "name": "Sarthak Singh",
+                "tagline": "I might be LUCKY ....."
+            },
+            {
+                "img": "",
+                "name": "Shubham Kumar ",
+                "tagline": "Stories, spirit \u0026 REBECA vibes"
+            },
+            {
+                "img": "",
+                "name": "Tamanna Jana",
+                "tagline": "Built on caffeine and big dreams."
+            }
         ]
     },
     {
         "id": 2,
-        "team": "Finance",
+        "team": "Business and Alumni Meet",
         "members": [
-            { "name": "Rahul Sharma", "position": "Head", "img": "./assets/Team/rahul_sharma.webp" },
-            { "name": "Priya Singh", "position": "Associate Head", "img": "./assets/Team/priya_singh.webp" },
-            { "name": "Vikram Seth", "position": "Associate Head", "img": "./assets/Team/vikram_seth.webp" },
-            { "name": "Sneha Roy", "position": "Associate", "img": "./assets/Team/sneha_roy.webp" },
-            { "name": "Amitabh Vora", "position": "Associate", "img": "./assets/Team/amitabh_vora.webp" },
-            { "name": "Rohan Mehra", "position": "Associate", "img": "./assets/Team/rohan_mehra.webp" }
+            {
+                "img": "",
+                "name": "Akarsh Srivastava ",
+                "tagline": "Committed to Excellence."
+            },
+            {
+                "img": "",
+                "name": "Jigyasha Kumari ",
+                "tagline": "Quiet Force"
+            },
+            {
+                "img": "",
+                "name": "Keshav bhagat",
+                "tagline": "Be voice over echo"
+            },
+            {
+                "img": "",
+                "name": "Prabhat Tiwari ",
+                "tagline": "महादेव 🕉️🔱"
+            },
+            {
+                "img": "",
+                "name": "Sagnik Ganguly",
+                "tagline": "Jack of all Trades...."
+            },
+            {
+                "img": "",
+                "name": "Sneha Mosha",
+                "tagline": "To define is to limit."
+            },
+            {
+                "img": "",
+                "name": "Yaswanth Pedapudi ",
+                "tagline": "Phoenix"
+            }
         ]
     },
     {
         "id": 3,
-        "team": "Cultural",
+        "team": "Competition and Seminars",
         "members": [
-            { "name": "Ishita Das", "position": "Head", "img": "./assets/Team/ishita_das.webp" },
-            { "name": "Arjun Mehra", "position": "Associate Head", "img": "./assets/Team/arjun_mehra.webp" },
-            { "name": "Sanya Malhotra", "position": "Associate Head", "img": "./assets/Team/sanya_malhotra.webp" },
-            { "name": "Rohan Joshi", "position": "Associate", "img": "./assets/Team/rohan_joshi.webp" },
-            { "name": "Kriti Sanon", "position": "Associate", "img": "./assets/Team/kriti_sanon.webp" },
-            { "name": "Varun Thakur", "position": "Associate", "img": "./assets/Team/varun_thakur.webp" }
+            {
+                "img": "",
+                "name": "Abhas Maji",
+                "tagline": "I never demand about the success. I work for it🤞🏻"
+            },
+            {
+                "img": "",
+                "name": "Jit Malakar ",
+                "tagline": "I am still learning."
+            },
+            {
+                "img": "",
+                "name": "Ritik Yadav ",
+                "tagline": "Being_45 🦂"
+            },
+            {
+                "img": "",
+                "name": "Satadru Sengupta ",
+                "tagline": "#Hok_Ullas"
+            },
+            {
+                "img": "",
+                "name": "SRISHTI GUPTA",
+                "tagline": "Cazzz..... "
+            },
+            {
+                "img": "",
+                "name": "Suchetana Bhukta ",
+                "tagline": "Ensemble vers l\u0027avenir"
+            },
+            {
+                "img": "",
+                "name": "Sumit Kumar ",
+                "tagline": "Reconnect, Relive and Reimagine "
+            }
         ]
     },
     {
         "id": 4,
-        "team": "Event",
+        "team": "Cultural",
         "members": [
-            { "name": "Sneha Kapoor", "position": "Head", "img": "./assets/Team/sneha_kapoor.webp" },
-            { "name": "Vikram Rathore", "position": "Associate Head", "img": "./assets/Team/vikram_rathore.webp" },
-            { "name": "Zoya Akhtar", "position": "Associate Head", "img": "./assets/Team/zoya_akhtar.webp" },
-            { "name": "Farhan Ahmed", "position": "Associate", "img": "./assets/Team/farhan_ahmed.webp" },
-            { "name": "Diya Mirza", "position": "Associate", "img": "./assets/Team/diya_mirza.webp" },
-            { "name": "Kabir Khan", "position": "Associate", "img": "./assets/Team/kabir_khan.webp" }
+            {
+                "img": "",
+                "name": "Aditi Mondal",
+                "tagline": "Please hesitate to reach out "
+            },
+            {
+                "img": "",
+                "name": "Farhan Talukdar",
+                "tagline": "Cazz..ho jayega kaam."
+            },
+            {
+                "img": "",
+                "name": "Prodipta Das",
+                "tagline": "Echoes from the Dark"
+            },
+            {
+                "img": "",
+                "name": "Shinjini Roy",
+                "tagline": "If i were you, i\u0027d wanna be me too."
+            },
+            {
+                "img": "",
+                "name": "Sohom Chakraborty",
+                "tagline": "Jigsaw Falling Into Place"
+            },
+            {
+                "img": "",
+                "name": "Somnath Majumder",
+                "tagline": "Ready to Rise"
+            },
+            {
+                "img": "",
+                "name": "Susanta Kumar Das ",
+                "tagline": "Homecoming of the BEings: 85 Years and Counting"
+            },
+            {
+                "img": "",
+                "name": "Viresh Awasthi",
+                "tagline": "Chai piyo, biscuit khao."
+            }
         ]
     },
     {
         "id": 5,
-        "team": "Resource Information",
+        "team": "Events",
         "members": [
-            { "name": "Amit Verma", "position": "Head", "img": "./assets/Team/amit_verma.webp" },
-            { "name": "Pooja Hegde", "position": "Associate Head", "img": "./assets/Team/pooja_hegde.webp" },
-            { "name": "Varun Dhawan", "position": "Associate Head", "img": "./assets/Team/varun_dhawan.webp" },
-            { "name": "Sara Ali", "position": "Associate", "img": "./assets/Team/sara_ali.webp" },
-            { "name": "Kartik Aaryan", "position": "Associate", "img": "./assets/Team/kartik_aaryan.webp" },
-            { "name": "Janhvi Kapoor", "position": "Associate", "img": "./assets/Team/janhvi_kapoor.webp" }
+            {
+                "img": "",
+                "name": "Aditya Kumar Vats ",
+                "tagline": "Architect of the chaos "
+            },
+            {
+                "img": "",
+                "name": "Aliva Polley ",
+                "tagline": "\"All the world\u0027s a stage, and all the men and women merely players.\""
+            },
+            {
+                "img": "",
+                "name": "Ankita Balu Sapkal ",
+                "tagline": "Set the vibe right "
+            },
+            {
+                "img": "",
+                "name": "Aritra Mondal ",
+                "tagline": "Behind Every Perfect Event"
+            },
+            {
+                "img": "",
+                "name": "Karthikeyan M",
+                "tagline": "Karthik"
+            },
+            {
+                "img": "",
+                "name": "Prashant Kumar",
+                "tagline": "• Behind the Spotlight •"
+            },
+            {
+                "img": "",
+                "name": "Rounak Sarkar ",
+                "tagline": "Rounak "
+            },
+            {
+                "img": "",
+                "name": "Ruman Paul ",
+                "tagline": "Ebhabeo fire asa jaye !!"
+            },
+            {
+                "img": "",
+                "name": "Sangeet Dhabare",
+                "tagline": "Patience above, Ambition at Core. â€ŽThe Stronger we Soar, The Louder we Roar."
+            },
+            {
+                "img": "",
+                "name": "Shreyasi Dey",
+                "tagline": "\"The mind behind the magic.\""
+            },
+            {
+                "img": "",
+                "name": "Shubham Singh Yadav",
+                "tagline": "Moments Made Magical"
+            },
+            {
+                "img": "",
+                "name": "Shubham Verma ",
+                "tagline": "Pro Event Manager"
+            },
+            {
+                "img": "",
+                "name": "SUJOY SAHA",
+                "tagline": "Fest Mood on..."
+            },
+            {
+                "img": "",
+                "name": "Suryansh Singh ",
+                "tagline": "Chaos? Curated."
+            }
         ]
     },
     {
         "id": 6,
-        "team": "Travel & Logistics",
+        "team": "Finance",
         "members": [
-            { "name": "Rohan Jha", "position": "Head", "img": "./assets/Team/rohan_jha.webp" },
-            { "name": "Karan Malhotra", "position": "Associate Head", "img": "./assets/Team/karan_malhotra.webp" },
-            { "name": "Deepika Paul", "position": "Associate Head", "img": "./assets/Team/deepika_paul.webp" },
-            { "name": "Ranveer Singh", "position": "Associate", "img": "./assets/Team/ranveer_singh.webp" },
-            { "name": "Alia Bhatt", "position": "Associate", "img": "./assets/Team/alia_bhatt.webp" },
-            { "name": "Saif Ali", "position": "Associate", "img": "./assets/Team/saif_ali.webp" }
+            {
+                "img": "",
+                "name": "Bontha Likhith",
+                "tagline": "Working in shadows."
+            },
+            {
+                "img": "",
+                "name": "Jayesh Saini ",
+                "tagline": "Budgeting the Celebration"
+            },
+            {
+                "img": "",
+                "name": "Sayani Biswas ",
+                "tagline": "Dancing heart"
+            },
+            {
+                "img": "",
+                "name": "Swyam tiwari",
+                "tagline": "Alvida... "
+            },
+            {
+                "img": "",
+                "name": "Vedant Dhanraj Bagade ",
+                "tagline": " \"With great power comes great responsibility\""
+            },
+            {
+                "img": "",
+                "name": "Vipin Kr. Chaudhary ",
+                "tagline": "God\u0027s Plan!!"
+            }
         ]
     },
     {
         "id": 7,
-        "team": "Sponsorship",
+        "team": "Photography",
         "members": [
-            { "name": "Ananya Roy", "position": "Head", "img": "./assets/Team/ananya_roy.webp" },
-            { "name": "Siddharth Jain", "position": "Associate Head", "img": "./assets/Team/siddharth_jain.webp" },
-            { "name": "Kiara Advani", "position": "Associate Head", "img": "./assets/Team/kiara_advani.webp" },
-            { "name": "Sid Gupta", "position": "Associate", "img": "./assets/Team/sid_gupta.webp" },
-            { "name": "Mira Rajput", "position": "Associate", "img": "./assets/Team/mira_put.webp" },
-            { "name": "Ishaan Khatter", "position": "Associate", "img": "./assets/Team/ishaan_khatter.webp" }
+            {
+                "img": "",
+                "name": "Anamika Singh ",
+                "tagline": "Stay rare"
+            },
+            {
+                "img": "",
+                "name": "Aritra Biswas",
+                "tagline": "@aritrabiswas._"
+            },
+            {
+                "img": "",
+                "name": "Arka Mondal ",
+                "tagline": ""
+            },
+            {
+                "img": "",
+                "name": "Binayak Murmu ",
+                "tagline": "Busy Editing "
+            },
+            {
+                "img": "",
+                "name": "Debojyoti Kundu ",
+                "tagline": "Camerawala jr."
+            },
+            {
+                "img": "",
+                "name": "Sandip Kumar Das ",
+                "tagline": "Capture the energy before the frame"
+            },
+            {
+                "img": "",
+                "name": "Tanushree Gupta ",
+                "tagline": "Through her lens"
+            }
         ]
     },
     {
         "id": 8,
         "team": "Publication",
         "members": [
-            { "name": "Tanvi Goyal", "position": "Head", "img": "./assets/Team/tanvi_goyal.webp" },
-            { "name": "Manan Vora", "position": "Associate Head", "img": "./assets/Team/manan_vora.webp" },
-            { "name": "Radhika Apte", "position": "Associate Head", "img": "./assets/Team/radhika_apte.webp" },
-            { "name": "Ayushmann Khurrana", "position": "Associate", "img": "./assets/Team/ayushmann_khurrana.webp" },
-            { "name": "Tabu Hashmi", "position": "Associate", "img": "./assets/Team/tabu_hashmi.webp" },
-            { "name": "Jim Sarbh", "position": "Associate", "img": "./assets/Team/jim_sarbh.webp" }
+            {
+                "img": "",
+                "name": "Abhishek Govind Gaykhe",
+                "tagline": "Gaykhe"
+            },
+            {
+                "img": "",
+                "name": "Anwesha Chowdhury ",
+                "tagline": "probably behind a screen somewhere"
+            },
+            {
+                "img": "",
+                "name": "Debaditya Nath",
+                "tagline": "There\u0027s a high chance I designed the tshirt you\u0027re wearing rn"
+            },
+            {
+                "img": "",
+                "name": "Dubakula Nithin Kumar ",
+                "tagline": "#BEingCivilEngineer"
+            },
+            {
+                "img": "",
+                "name": "Mrinmoy Dhali ",
+                "tagline": "Ink the Legacy. Frame the Moment"
+            },
+            {
+                "img": "",
+                "name": "Sandeep Kumawat ",
+                "tagline": "Designer "
+            },
+            {
+                "img": "",
+                "name": "Sangam Gupta ",
+                "tagline": "Dream big. Stay focused"
+            },
+            {
+                "img": "",
+                "name": "Shalini Bhattacharya",
+                "tagline": "Lost in thoughtcrime."
+            },
+            {
+                "img": "",
+                "name": "Suvojit Mandal ",
+                "tagline": "\"Lights don\u0027t bother me, it\u0027s the Noise.\""
+            },
+            {
+                "img": "",
+                "name": "Vivek Raj",
+                "tagline": "\"I am running away from my responsibilities, and it feels good.\" - Michael Scott"
+            },
+            {
+                "img": "",
+                "name": "Zaid Akhter ",
+                "tagline": "What if I fall? What if I fly?"
+            }
         ]
     },
     {
         "id": 9,
         "team": "Publicity",
         "members": [
-            { "name": "Aditya Rao", "position": "Head", "img": "./assets/Team/aditya_rao.webp" },
-            { "name": "Megha Bisht", "position": "Associate Head", "img": "./assets/Team/megha_bisht.webp" },
-            { "name": "Tiger Shroff", "position": "Associate Head", "img": "./assets/Team/tiger_shroff.webp" },
-            { "name": "Disha Patani", "position": "Associate", "img": "./assets/Team/disha_patani.webp" },
-            { "name": "Vicky Kaushal", "position": "Associate", "img": "./assets/Team/vicky_kaushal.webp" },
-            { "name": "Katrina Kaif", "position": "Associate", "img": "./assets/Team/katrina_kaif.webp" }
+            {
+                "img": "",
+                "name": "Abhishek dhaka ",
+                "tagline": ""
+            },
+            {
+                "img": "",
+                "name": "Allamraju Sai Prasad ",
+                "tagline": ""
+            },
+            {
+                "img": "",
+                "name": "Arka Dyuti Pal ",
+                "tagline": "Manners Maketh Man"
+            },
+            {
+                "img": "",
+                "name": "Dhruv Mishra ",
+                "tagline": "Make a difference"
+            },
+            {
+                "img": "",
+                "name": "Kanwaldeep",
+                "tagline": "This time it’s real…"
+            },
+            {
+                "img": "",
+                "name": "Sateesh Gupta",
+                "tagline": "Chilling out "
+            },
+            {
+                "img": "",
+                "name": "Sneha Anand Das ",
+                "tagline": "Behind the Buzz"
+            },
+            {
+                "img": "",
+                "name": "Sneha Medda",
+                "tagline": "Legacy. Passion. Rebeca"
+            },
+            {
+                "img": "",
+                "name": "Subhoshri Pal",
+                "tagline": "To thine own self"
+            }
         ]
     },
     {
         "id": 10,
-        "team": "Stage Decoration",
+        "team": "Refreshments",
         "members": [
-            { "name": "Ritika Sen", "position": "Head", "img": "./assets/Team/ritika_sen.webp" },
-            { "name": "Sushant Singh", "position": "Associate Head", "img": "./assets/Team/sushant_singh.webp" },
-            { "name": "Shraddha Kapoor", "position": "Associate Head", "img": "./assets/Team/shraddha_kapoor.webp" },
-            { "name": "Rajkumar Rao", "position": "Associate", "img": "./assets/Team/rajkumar_rao.webp" },
-            { "name": "Bhumi Pednekar", "position": "Associate", "img": "./assets/Team/bhumi_pednekar.webp" },
-            { "name": "Ayush Mehra", "position": "Associate", "img": "./assets/Team/ayush_mehra.webp" }
+            {
+                "img": "",
+                "name": "Aditi Vyas ",
+                "tagline": "Surviving on fun and love \u003c3"
+            },
+            {
+                "img": "",
+                "name": "Badana Ram Prasad ",
+                "tagline": "Rp07"
+            },
+            {
+                "img": "",
+                "name": "Chukka Dheeraj",
+                "tagline": "Organizing the disorder you came to enjoy..."
+            },
+            {
+                "img": "",
+                "name": "Harshit Kumar ",
+                "tagline": "Ni mahi dil le gaya koi"
+            },
+            {
+                "img": "",
+                "name": "Mahesh purohit ",
+                "tagline": "Energy in Every Sip"
+            },
+            {
+                "img": "",
+                "name": "ONTERU SHIVA KUMAR ",
+                "tagline": "It\u0027s me 🥱"
+            },
+            {
+                "img": "",
+                "name": "Rishu Kumari ",
+                "tagline": "Rebeca – Where Energy Meets Flavor"
+            },
+            {
+                "img": "",
+                "name": "Rohan Ghosal ",
+                "tagline": "Rohan Ghosal , SOMS "
+            }
         ]
     },
     {
         "id": 11,
-        "team": "Business & Alumni Meet",
+        "team": "Resource Information",
         "members": [
-            { "name": "Sameer Khan", "position": "Head", "img": "./assets/Team/sameer_khan.webp" },
-            { "name": "Vidya Balan", "position": "Associate Head", "img": "./assets/Team/vidya_balan.webp" },
-            { "name": "Pankaj Tripathi", "position": "Associate Head", "img": "./assets/Team/pankaj_tripathi.webp" },
-            { "name": "Nawazuddin Siddiqui", "position": "Associate", "img": "./assets/Team/nawazuddin_siddiqui.webp" },
-            { "name": "Manoj Bajpayee", "position": "Associate", "img": "./assets/Team/manoj_bajpayee.webp" },
-            { "name": "Kay Kay Menon", "position": "Associate", "img": "./assets/Team/kay_kay_menon.webp" }
+            {
+                "img": "",
+                "name": "Aman Kumar Mehta ",
+                "tagline": "🙏🏻🙏🏻"
+            },
+            {
+                "img": "",
+                "name": "Ambhrin Roy ",
+                "tagline": "Fest Success Starts Here"
+            },
+            {
+                "img": "",
+                "name": "Kaladhar Gopal",
+                "tagline": "Seeing the world in pixels"
+            },
+            {
+                "img": "",
+                "name": "PINAK PARATE",
+                "tagline": "\"Creation is never a choice, it\u0027s a requirement.\" ~pinskyboiii"
+            },
+            {
+                "img": "",
+                "name": "Saketh Manchu",
+                "tagline": "Roar\u0026Rule"
+            },
+            {
+                "img": "",
+                "name": "Sanatan Santosh Samantara ",
+                "tagline": "कर्मण्येवाधिकारस्ते मा फलेषु कदाचन ||"
+            }
         ]
     },
     {
         "id": 12,
-        "team": "Competition and Seminars",
+        "team": "Sponsorship",
         "members": [
-            { "name": "Deepak Kumar", "position": "Head", "img": "./assets/Team/deepak_kumar.webp" },
-            { "name": "Taapsee Pannu", "position": "Associate Head", "img": "./assets/Team/taapsee_pannu.webp" },
             {
-                "name": "Abhishek Bachchan",
-                "position": "Associate Head",
-                "img": "./assets/Team/abhishek_bachchan.webp"
+                "img": "",
+                "name": "Animesh Vijay Bawane ",
+                "tagline": "\"S\u0027all good, man\""
             },
-            { "name": "Aishwarya Rai", "position": "Associate", "img": "./assets/Team/aishwarya_rai.webp" },
-            { "name": "Kajol Devgan", "position": "Associate", "img": "./assets/Team/kajol_devgan.webp" },
-            { "name": "Rani Mukerji", "position": "Associate", "img": "./assets/Team/rani_mukerji.webp" }
+            {
+                "img": "",
+                "name": "Aykchat Kalita ",
+                "tagline": "REBECA karaenge!!"
+            },
+            {
+                "img": "",
+                "name": "Hardik Bansal ",
+                "tagline": "Happy Happy Happy Happy "
+            },
+            {
+                "img": "",
+                "name": "Islavath Raj Kumar ",
+                "tagline": "It\u0027s Prince "
+            },
+            {
+                "img": "",
+                "name": "Kingshuk Sadhukhan",
+                "tagline": "You can\u0027t have it all, choose wisely"
+            },
+            {
+                "img": "",
+                "name": "Nirupama Thakur ",
+                "tagline": "Don\u0027t be loud, lift your logic."
+            },
+            {
+                "img": "",
+                "name": "Prateek Yadav",
+                "tagline": "Associate Head - Sponsorship "
+            },
+            {
+                "img": "",
+                "name": "Rajarshi Ray",
+                "tagline": "Making It Happen"
+            },
+            {
+                "img": "",
+                "name": "Roshni Patel ",
+                "tagline": "Your Band,Our passion "
+            },
+            {
+                "img": "",
+                "name": "SUMAIYA KULSUM ",
+                "tagline": "\"You get what you deserve\""
+            },
+            {
+                "img": "",
+                "name": "Tarishi Sharma ",
+                "tagline": "\"Where Culture Powers Creation.\""
+            }
         ]
     },
     {
         "id": 13,
-        "team": "Web Development",
+        "team": "Stage and Campus Decorations",
         "members": [
-            { "name": "Sahil Gupta", "position": "Head", "img": "./assets/Team/sahil_gupta.webp" },
-            { "name": "Nidhi Aggarwal", "position": "Associate Head", "img": "./assets/Team/nidhi_aggarwal.webp" },
-            { "name": "Satya Nadella", "position": "Associate Head", "img": "./assets/Team/satya_nadella.webp" },
-            { "name": "Sundar Pichai", "position": "Associate", "img": "./assets/Team/sundar_pichai.webp" },
-            { "name": "Elon Musk", "position": "Associate", "img": "./assets/Team/elon_musk.webp" },
-            { "name": "Mark Zuckerberg", "position": "Associate", "img": "./assets/Team/mark_zuckerberg.webp" }
+            {
+                "img": "",
+                "name": "Aditya Raj Verma",
+                "tagline": "Cazzz...."
+            },
+            {
+                "img": "",
+                "name": "Bidisha Garai",
+                "tagline": "Plans in hand, a racing heart - let\u0027s make magic, part by part. "
+            },
+            {
+                "img": "",
+                "name": "Dhruv kumar",
+                "tagline": "Dreams comes true when passion meet execution "
+            }
         ]
     },
     {
         "id": 14,
-        "team": "Refreshments",
+        "team": "Travel and Logistics",
         "members": [
-            { "name": "Harshvardhan", "position": "Head", "img": "./assets/Team/harshvardhan.webp" },
-            { "name": "Sanjeev Kapoor", "position": "Associate Head", "img": "./assets/Team/sanjeev_kapoor.webp" },
-            { "name": "Vikas Khanna", "position": "Associate Head", "img": "./assets/Team/vikas_khanna.webp" },
-            { "name": "Ranveer Brar", "position": "Associate", "img": "./assets/Team/ranveer_brar.webp" },
-            { "name": "Garima Arora", "position": "Associate", "img": "./assets/Team/garima_arora.webp" },
-            { "name": "Kun Kapur", "position": "Associate", "img": "./assets/Team/kun_kapur.webp" }
+            {
+                "img": "",
+                "name": "Akanksha Ajey ",
+                "tagline": "I\u0027m The VIBE."
+            },
+            {
+                "img": "",
+                "name": "Arohan Chakraborty ",
+                "tagline": "✨ PUJO আসছে — ReBECA 2026 ✨ The heartbeat of celebration, culture, and creativity.  "
+            },
+            {
+                "img": "",
+                "name": "Bobburu Pavan Karthik ",
+                "tagline": "Peace"
+            },
+            {
+                "img": "",
+                "name": "Phoji meena ",
+                "tagline": "Need we say more"
+            },
+            {
+                "img": "",
+                "name": "Satyam kumar",
+                "tagline": "Let the work speak."
+            }
         ]
     },
     {
         "id": 15,
         "team": "Volunteers",
         "members": [
-            { "name": "Yash Patel", "position": "Head", "img": "./assets/Team/yash_patel.webp" },
-            { "name": "Sonu Sood", "position": "Associate Head", "img": "./assets/Team/sonu_sood.webp" },
             {
-                "name": "Jacqueline Fernandez",
-                "position": "Associate Head",
-                "img": "./assets/Team/jacqueline_fernandez.webp"
+                "img": "",
+                "name": "Adesh Pal",
+                "tagline": "Be Positive "
             },
-            { "name": "Varun Sharma", "position": "Associate", "img": "./assets/Team/varun_sharma.webp" },
-            { "name": "Katrina Kaif", "position": "Associate", "img": "./assets/Team/katrina_kaif.webp" },
-            { "name": "Arjun Kapoor", "position": "Associate", "img": "./assets/Team/arjun_kapoor.webp" }
+            {
+                "img": "",
+                "name": "Arpit Sharma",
+                "tagline": "Be a piece of peace✨"
+            },
+            {
+                "img": "",
+                "name": "DIYA BANSAL ",
+                "tagline": "Creating moments they’ll talk about next semester..."
+            },
+            {
+                "img": "",
+                "name": "Pawan Kumar",
+                "tagline": "Ready to serve, eager to help"
+            },
+            {
+                "img": "",
+                "name": "Sayan Paul",
+                "tagline": "Desolate"
+            },
+            {
+                "img": "",
+                "name": "Shaumik Das",
+                "tagline": "Amra Achi Amra Thakbo Amra Thakte Chai"
+            },
+            {
+                "img": "",
+                "name": "Shubham Jha",
+                "tagline": "Lead with heart. Serve with purpose"
+            },
+            {
+                "img": "",
+                "name": "Srijita Banerjee",
+                "tagline": "Volunteer "
+            },
+            {
+                "img": "",
+                "name": "Tanushree Das Adhikari ",
+                "tagline": "PUJO আসছে..."
+            },
+            {
+                "img": "",
+                "name": "Yogesh Kumar ",
+                "tagline": "Building Trust Through Actions"
+            }
         ]
     },
     {
         "id": 16,
-        "team": "Photography",
+        "team": "Web Development",
         "members": [
-            { "name": "Abhishek Paul", "position": "Head", "img": "./assets/Team/abhishek_paul.webp" },
-            { "name": "Daboo Ratnani", "position": "Associate Head", "img": "./assets/Team/daboo_ratnani.webp" },
-            { "name": "Raghu Rai", "position": "Associate Head", "img": "./assets/Team/raghu_rai.webp" },
-            { "name": "Sobhita Dhulipala", "position": "Associate", "img": "./assets/Team/sobhita_dhulipala.webp" },
-            { "name": "Jim Sarbh", "position": "Associate", "img": "./assets/Team/jim_sarbh.webp" },
-            { "name": "Vijay Varma", "position": "Associate", "img": "./assets/Team/vijay_varma.webp" }
-        ]
-    },
-    {
-        "id": 17,
-        "team": "Joint Secretary",
-        "members": [
-            { "name": "Divya Shetty", "position": "Head", "img": "./assets/Team/divya_shetty.webp" },
-            { "name": "Ibrahim Ali", "position": "Associate Head", "img": "./assets/Team/ibrahim_ali.webp" },
-            { "name": "Suhana Khan", "position": "Associate Head", "img": "./assets/Team/suhana_khan.webp" },
-            { "name": "Khushi Kapoor", "position": "Associate", "img": "./assets/Team/khushi_kapoor.webp" },
-            { "name": "Agastya Nanda", "position": "Associate", "img": "./assets/Team/agastya_nanda.webp" },
-            { "name": "Shanaya Kapoor", "position": "Associate", "img": "./assets/Team/shanaya_kapoor.webp" }
-        ]
-    },
-    {
-        "id": 18,
-        "team": "Fixed Signatory",
-        "members": [
-            { "name": "Manish Tiwari", "position": "Head", "img": "./assets/Team/manish_tiwari.webp" },
-            { "name": "Ratan Tata", "position": "Associate Head", "img": "./assets/Team/ratan_tata.webp" },
-            { "name": "Mukesh Ambani", "position": "Associate Head", "img": "./assets/Team/mukesh_ambani.webp" },
-            { "name": "Kumar Mangalam", "position": "Associate", "img": "./assets/Team/kumar_mangalam.webp" },
-            { "name": "Anand Mahindra", "position": "Associate", "img": "./assets/Team/anand_mahindra.webp" },
-            { "name": "Gautam Adani", "position": "Associate", "img": "./assets/Team/gautam_adani.webp" }
-        ]
-    },
-    {
-        "id": 19,
-        "team": "BECA Magazine",
-        "members": [
-            { "name": "Kavita Reddy", "position": "Head", "img": "./assets/Team/kavita_reddy.webp" },
-            { "name": "Shashi Tharoor", "position": "Associate Head", "img": "./assets/Team/shashi_tharoor.webp" },
-            { "name": "Arundhati Roy", "position": "Associate Head", "img": "./assets/Team/arundhati_roy.webp" },
-            { "name": "Vikram Seth", "position": "Associate", "img": "./assets/Team/vikram_seth.webp" },
-            { "name": "Jhumpa Lahiri", "position": "Associate", "img": "./assets/Team/jhumpa_lahiri.webp" },
-            { "name": "Anita Desai", "position": "Associate", "img": "./assets/Team/anita_desai.webp" }
+            {
+                "img": "",
+                "name": "Abhijit Karmakar",
+                "tagline": "Dream big, deploy bigger"
+            },
+            {
+                "img": "",
+                "name": "Abhishek Kumar",
+                "tagline": "Abhishek Kumar (absie)"
+            },
+            {
+                "img": "",
+                "name": "Anchal Agrawal ",
+                "tagline": "Rebeca - Unleash the Madness"
+            },
+            {
+                "img": "",
+                "name": "Mohak Singh ",
+                "tagline": "BEing Forever "
+            },
+            {
+                "img": "",
+                "name": "Mrigaj Shaw",
+                "tagline": "Too many Tabs open"
+            },
+            {
+                "img": "",
+                "name": "Soumyajit Karmakar",
+                "tagline": "Your bugs fear my keyboard"
+            },
+            {
+                "img": "",
+                "name": "Vaibhav Singh",
+                "tagline": "The Alpha and The Omega"
+            },
+            {
+                "img": "",
+                "name": "Yasharth Shukla",
+                "tagline": "I am stuck here ..... UwU"
+            }
         ]
     }
 ]

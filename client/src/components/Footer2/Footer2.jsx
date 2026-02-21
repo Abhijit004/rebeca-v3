@@ -9,7 +9,7 @@ const Footer2 = () => {
     return (
         <div style={{ position: "relative" }}>
             <div className="topimg">
-                <img src="/assets/imgs/Footer/concert-blue.webp" />
+                <img src="/assets/imgs/Footer/footer-design-rebeca.webp" />
             </div>
             <div className="footer2">
                 <div className="left-col">
@@ -26,21 +26,6 @@ const Footer2 = () => {
                         </a>
                     </div>
                     <div className="address">© rebeca.in 2025. All right reserved</div>
-                    {/* <div className="address">
-					Made with 💙 by{" "}
-					<a href="https://dugarrishab.github.io/RishabDugar/">
-						Rishab Dugar
-					</a>
-					,{" "}
-					<a href="https://abhijit-karmakar.vercel.app/">
-						Abhijit Karmakar
-					</a>
-					,{" "}
-					<a href="https://soumyajit-dev.vercel.app/">
-						Soumyajit Karmakar
-					</a>{" "}
-					and <a href="">Utsab Kundu</a>
-				</div> */}
                 </div>
                 <div className="right-col">
                     <div className="title">Contacts</div>
@@ -66,13 +51,6 @@ const Footer2 = () => {
 
                             <div className="ph-num">Treasurer</div>
                         </div>
-                        {/* <div className="contact">
-                            <div className="name">Ujjwal Chaudhari</div>
-
-                            <div className="ph-num">
-                                <span className="material-icons">person</span>+91 95552 09179
-                            </div>
-                        </div> */}
                         <div className="contact">
                             <div className="name">Sudhanshu Mishra</div>
 
@@ -93,28 +71,28 @@ const Footer2 = () => {
                     <div className="social-h">Visit us Virtually</div>
                     <div className="social-icons">
                         <a href="mailto: 83rebeca2k24@gmail.com">
-                            <IconButton sx={{bgcolor: 'var(--primary)', '&:hover':{
+                            <IconButton sx={{bgcolor: 'var(--accent2)', '&:hover':{
                                 bgcolor: 'rgb(93, 93, 93)'
                             }}} size="medium">
                                 <EmailRounded />
                             </IconButton>
                         </a>
                         <a href="https://www.facebook.com/rebeca.iiests">
-                            <IconButton sx={{bgcolor: 'var(--primary)', '&:hover':{
+                            <IconButton sx={{bgcolor: 'var(--accent2)', '&:hover':{
                                 bgcolor: 'rgb(93, 93, 93)'
                             }}} size="medium">
                                 <FacebookRounded />
                             </IconButton>
                         </a>
                         <a href="https://www.instagram.com/rebeca_iiests">
-                            <IconButton sx={{bgcolor: 'var(--primary)', '&:hover':{
+                            <IconButton sx={{bgcolor: 'var(--accent2)', '&:hover':{
                                 bgcolor: 'rgb(93, 93, 93)'
                             }}} size="medium">
                                 <Instagram />
                             </IconButton>
                         </a>
                         <a href="https://www.youtube.com/@rebecaiiests7685">
-                            <IconButton sx={{bgcolor: 'var(--primary)', '&:hover':{
+                            <IconButton sx={{bgcolor: 'var(--accent2)', '&:hover':{
                                 bgcolor: 'rgb(93, 93, 93)'
                             }}} size="medium">
                                 <YouTubeIcon />
