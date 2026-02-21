@@ -8,7 +8,7 @@ const Eventpanel = ({ value, index, day, show, handle }) => {
         <div key={index} className={`event-data ${show && "expand"}`}>
             <div className="data-body">
                 <div className="img">
-                    <img src="/assets/imgs/Schedule/images.png" alt="event-icon" />
+                    {/* <img src="/assets/imgs/Schedule/images.png" alt="event-icon" /> */}
                 </div>
                 {show && (
                     <div className="desc">

@@ -57,18 +57,16 @@
     ],
     "screenshots": [
         {
-            "src": "/assets/imgs/screenshots/wide_angle.png",
-            "type": "image/png",
-            "sizes": "720x329",
-            "form_factor": "wide",
-            "icons": [{ "src": "favicon-96x96.ico", "sizes": "96x96" }]
+            "src": "/assets/imgs/screenshots/wide.webp",
+            "type": "image/webp",
+            "sizes": "2070x1294",
+            "form_factor": "wide"
         },
         {
-            "src": "/assets/imgs/screenshots/narrow_angle.png",
-            "type": "image/png",
-            "sizes": "372x771",
-            "form_factor": "narrow",
-            "icons": [{ "src": "favicon-96x96.ico", "sizes": "96x96" }]
+            "src": "/assets/imgs/screenshots/narrow.webp",
+            "type": "image/webp",
+            "sizes": "742x1608",
+            "form_factor": "narrow"        
         }
     ],
     "id": ".",
