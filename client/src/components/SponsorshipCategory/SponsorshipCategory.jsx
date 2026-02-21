@@ -1,3 +1,4 @@
+import React from "react";
 import "./SponsorshipCategory.css";
 
 const SponsorCategory = () => {
@@ -50,3 +51,6 @@ const SponsorCategory = () => {
       </div>
     </div>
   );
+};
+
+export default SponsorCategory;
