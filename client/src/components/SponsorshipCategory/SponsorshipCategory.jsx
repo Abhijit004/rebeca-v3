@@ -1,31 +1,52 @@
-import React from "react";
 import "./SponsorshipCategory.css";
 
 const SponsorCategory = () => {
-  const categories = [
-    { amount: "2.5 lAkH", title1: "BECA", title2: "SPONSOR" },
-    { amount: "5.0 lAkH", title1: "ASSOCIATE", title2: "SPONSOR" },
-    { amount: "8.0 lAkH", title1: "Co-", title2: "SPONSOR" },
-    { amount: "10 lAkH", title1: "TITLE", title2: "SPONSOR" },
-  ];
-
   return (
-    <div className="sponsorship-timeline-container">
-      <div className="timeline-items">
-        <div className="timeline-line-bg"></div>
-        {categories.map((cat, index) => (
-          <React.Fragment key={index}>
-            <div className={`timeline-amount item-${index}`}>{cat.amount}</div>
-            <div className={`timeline-dot item-${index}`}></div>
-            <div className={`timeline-title item-${index}`}>
-              <div>{cat.title1}</div>
-              <div>{cat.title2}</div>
-            </div>
-          </React.Fragment>
-        ))}
+    <div className="mainContainer">
+      <div className="flexColumnAda">
+        <div className="sponsor-container">
+          <span className="titleSponsor">Title Sponsor</span>
+          <span className="lakhPlus">10Lakh +</span>
+          <span className="loremIpsum">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eros
+            lacus, condimentum in laoreet in, congue in libero. Ut viverra
+            cursus diam,
+          </span>
+        </div>
+        <div className="sponsor-container">
+          <span className="titleSponsor">Co-sponsor</span>
+          <span className="lakhPlus">8 Lakh +</span>
+          <span className="loremIpsum">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eros
+            lacus, condimentum in laoreet in, congue in libero. Ut viverra
+            cursus diam,
+          </span>
+        </div>
+        <div className="sponsor-container">
+          <span className="titleSponsor">Co-sponsor</span>
+          <span className="lakhPlus">8 Lakh +</span>
+          <span className="loremIpsum">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eros
+            lacus, condimentum in laoreet in, congue in libero. Ut viverra
+            cursus diam,
+          </span>
+        </div>
+        <div className="sponsor-container">
+          <span className="titleSponsor">Co-sponsor</span>
+          <span className="lakhPlus">8 Lakh +</span>
+          <span className="loremIpsum">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eros
+            lacus, condimentum in laoreet in, congue in libero. Ut viverra
+            cursus diam,
+          </span>
+        </div>
+      </div>
+      <div className="flexColumnCc">
+        <div className="ellipse" />
+        <div className="line" />
+        <div className="ellipse5" />
+        <div className="ellipse6" />
+        <div className="ellipse7" />
       </div>
     </div>
   );
-};
-
-export default SponsorCategory;

@@ -1,239 +1,157 @@
-@import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap');
 
-
-.sponsorship-timeline-container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 4rem auto;
-    padding: 0 1rem;
+.mainContainer {
     overflow: hidden;
 }
 
-.timeline-items {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: auto auto auto;
-    row-gap: 2rem;
+.mainContainer,
+.mainContainer * {
+    box-sizing: border-box;
+}
+
+input,
+select,
+textarea,
+button {
+    outline: 0;
+}
+
+.mainContainer {
     position: relative;
-    align-items: center;
-    justify-items: center;
+    display: flex;
+    width: 70vw;
+    height: 160vw;
+    margin: 0 auto;
 }
 
-.timeline-line-bg {
-    grid-row: 2;
-    grid-column: 1 / -1;
-    width: 90%;
-    height: 1px;
-    background-color: rgba(255, 255, 255, 0.7);
-    justify-self: center;
-    z-index: 1;
+
+.mainContainer .flexColumnAda {
+    position: absolute;
+    width: 50vw;
+    height: 100%;
+    left: 15vw;
+    font-size: 0px;
+    z-index: 16;
 }
 
-.timeline-amount {
-    font-family: "Sedgwick Ave Display", serif;
-    font-size: 1rem;
-    color: #fff;
-    letter-spacing: 1.5px;
-    line-height: 1;
+.mainContainer .flexColumnAda .sponsor-container{
+    height: 40vw;
 }
 
-.timeline-dot {
-    width: 10px;
-    height: 10px;
+.titleSponsor {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    width: 380px;
+    height: 5vw;
+    color: #ffffff;
+    font-family: Exo 2, var(--default-font-family);
+    font-size: 4vw;
+    font-weight: 700;
+    line-height: 7vh;
+    white-space: nowrap;
+    text-align: left;
+    z-index: 5;
+}
+
+.lakhPlus {
+    display: flex;
+    align-items: flex-start;
+    /* justify-content: center; */
+    position: relative;
+    width: 132px;
+    height: 34px;
+    margin-top: 1.5vw;
+    color: #ffffff;
+    font-family: Exo 2, var(--default-font-family);
+    font-size: 2.5vw;
+    font-weight: 400;
+    line-height: 33.6px;
+    text-align: left;
+    white-space: nowrap;
+    z-index: 13;
+}
+
+.loremIpsum {
+    display: block;
+    width: auto;
+    max-width: 90vw;
+    /* padding: 10px; */
+    margin-top: 1vw;
+    /* height: 40vw; */
+    /* margin-top: 0.5vw; */
+    color: #ffffff;
+    font-family: Exo 2, var(--default-font-family);
+    font-size: 2vw;
+    font-weight: 500;
+    /* line-height: 36px; */
+    word-break: break-word;
+    white-space: normal;
+    overflow-wrap: break-word;
+    text-align: left;
+    opacity: 0.5;
+}
+
+.flexColumnCc {
+    /* position: absolute; */
+    width: 10vw;
+    height: 100%;
+    /* top: 2px;
+    left: 0; */
+    display: flex;
+    justify-content: center;
+    z-index: 12;
+}
+
+.line {
+    position: absolute;
+    width: 1px;
+    height: 128vw;
+    background: url(https://static.codia.ai/image/2025-03-27/a9687e5c-851d-42d2-bcff-f30e30ec937d.svg) no-repeat center;
+    background-size: cover;
+    z-index: 4;
+}
+
+.ellipse {
+    position: absolute;
+    width: 7vw;
+    height: 7vw;
+    top: 0;
+    background: url(https://static.codia.ai/image/2025-03-27/afc69b04-241e-43f7-a63e-a17626237c7f.svg) no-repeat center;
+    background-size: cover;
+    z-index: 9;
     border-radius: 50%;
-    background-color: #fff;
-    z-index: 2;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-}
-
-.timeline-title {
-    font-family: "Sedgwick Ave Display", serif;
-    text-align: center;
-    font-size: 1rem;
-    color: #fff;
-    line-height: 1.1;
-    letter-spacing: 2px;
-}
-
-.timeline-amount.item-0 {
-    grid-column: 1;
-    grid-row: 1;
-}
-
-.timeline-amount.item-1 {
-    grid-column: 2;
-    grid-row: 1;
-}
-
-.timeline-amount.item-2 {
-    grid-column: 3;
-    grid-row: 1;
-}
-
-.timeline-amount.item-3 {
-    grid-column: 4;
-    grid-row: 1;
-}
-
-.timeline-dot.item-0 {
-    grid-column: 1;
-    grid-row: 2;
-}
-
-.timeline-dot.item-1 {
-    grid-column: 2;
-    grid-row: 2;
-}
-
-.timeline-dot.item-2 {
-    grid-column: 3;
-    grid-row: 2;
-}
-
-.timeline-dot.item-3 {
-    grid-column: 4;
-    grid-row: 2;
-}
-
-.timeline-title.item-0 {
-    grid-column: 1;
-    grid-row: 3;
-}
-
-.timeline-title.item-1 {
-    grid-column: 2;
-    grid-row: 3;
-}
-
-.timeline-title.item-2 {
-    grid-column: 3;
-    grid-row: 3;
-}
-
-.timeline-title.item-3 {
-    grid-column: 4;
-    grid-row: 3;
 }
 
 
-@media (max-width: 1000px) {
-    .timeline-title {
-        font-size: 2rem;
-    }
-
-    .timeline-amount {
-        font-size: 1.5rem;
-    }
+.ellipse5 {
+    position: absolute;
+    width: 5vw;
+    height: 5vw;
+    top: 41vw;
+    align-content: center;
+    background: url(https://static.codia.ai/image/2025-03-27/09371c92-b512-48fd-921e-0242bd1fff25.svg) no-repeat center;
+    background-size: cover;
+    z-index: 10;
+    border-radius: 50%;
 }
 
-@media (max-width: 700px) {
-    .timeline-title {
-        font-size: 1.6rem;
-    }
-
-    .timeline-amount {
-        font-size: 1.2rem;
-    }
-
-    .timeline-dot {
-        width: 8px;
-        height: 8px;
-    }
+.ellipse6 {
+    position: absolute;
+    width: 4vw;
+    height: 4vw;
+    top: 82vw;
+    background: url(https://static.codia.ai/image/2025-03-27/689a0803-caa5-455a-9aad-ad7e61db60ff.svg) no-repeat center;
+    background-size: cover;
+    z-index: 11;
+    border-radius: 50%;
 }
 
-@media (max-width: 550px) {
-    .timeline-items {
-        grid-template-columns: 1fr auto 1fr;
-        grid-template-rows: repeat(4, 1fr);
-        column-gap: 2rem;
-        row-gap: 3rem;
-    }
-
-    .timeline-line-bg {
-        grid-row: 1 / -1;
-        grid-column: 2;
-        width: 1px;
-        height: 100%;
-        background-color: rgba(255, 255, 255, 0.7);
-    }
-
-    .timeline-amount.item-0 {
-        grid-column: 1;
-        grid-row: 1;
-        justify-self: end;
-    }
-
-    .timeline-amount.item-1 {
-        grid-column: 1;
-        grid-row: 2;
-        justify-self: end;
-    }
-
-    .timeline-amount.item-2 {
-        grid-column: 1;
-        grid-row: 3;
-        justify-self: end;
-    }
-
-    .timeline-amount.item-3 {
-        grid-column: 1;
-        grid-row: 4;
-        justify-self: end;
-    }
-
-    .timeline-dot.item-0 {
-        grid-column: 2;
-        grid-row: 1;
-    }
-
-    .timeline-dot.item-1 {
-        grid-column: 2;
-        grid-row: 2;
-    }
-
-    .timeline-dot.item-2 {
-        grid-column: 2;
-        grid-row: 3;
-    }
-
-    .timeline-dot.item-3 {
-        grid-column: 2;
-        grid-row: 4;
-    }
-
-    .timeline-title.item-0 {
-        grid-column: 3;
-        grid-row: 1;
-        justify-self: start;
-        text-align: left;
-    }
-
-    .timeline-title.item-1 {
-        grid-column: 3;
-        grid-row: 2;
-        justify-self: start;
-        text-align: left;
-    }
-
-    .timeline-title.item-2 {
-        grid-column: 3;
-        grid-row: 3;
-        justify-self: start;
-        text-align: left;
-    }
-
-    .timeline-title.item-3 {
-        grid-column: 3;
-        grid-row: 4;
-        justify-self: start;
-        text-align: left;
-    }
-
-    .timeline-title {
-        font-size: 2rem;
-    }
-
-    .timeline-amount {
-        font-size: 1.6rem;
-    }
-}
+.ellipse7 {
+    position: absolute;
+    width: 3vw;
+    height: 3vw;
+    top: 126vw;
+    background: url(https://static.codia.ai/image/2025-03-27/995570e6-2dbe-41ec-9569-d11803733f7a.svg) no-repeat center;
+    background-size: cover;
+    z-index: 12;
+    border-radius: 50%;
