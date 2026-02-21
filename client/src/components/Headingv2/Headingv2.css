@@ -9,7 +9,7 @@
 }
 
 .headingv2 {
-    font-size: 5rem;
+    font-size: clamp(4rem, 3.6082rem + 1.6495vw, 5rem);
     letter-spacing: 0.1em;
     white-space: nowrap;
     text-shadow: 0 0 10px #000;
@@ -26,7 +26,7 @@
     /* 3. Make the default text color transparent so the background shows through */
     -webkit-text-fill-color: transparent;
     color: transparent;
-    font-size: 7rem;
+    font-size: clamp(5rem, 4.2165rem + 3.299vw, 7rem);
     line-height: 1em;
     letter-spacing: 0.1em;
     white-space: nowrap;

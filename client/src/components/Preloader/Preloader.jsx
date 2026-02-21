@@ -64,6 +64,7 @@ const styles = {
         justifyContent: "center",
         alignItems: "center",
         zIndex: 9999,
+        fontFamily: "var(--body-font)"
     },
     content: { textAlign: "center", width: "300px" },
     text: { fontSize: "3rem", margin: 0, fontWeight: "bold" },

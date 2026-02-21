@@ -1,9 +1,5 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './Schedule.css';
-import Heading from '../../components/Headingv2/Headingv2'; 
-import Button from '../../components/Button/Button'; 
-import maskGroup from '../../assets/images/home/Mask_group.webp';
-
 
 const Schedule = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -11,27 +7,27 @@ const Schedule = () => {
   const scheduleData = [
     { 
       day: "01", 
-      title: "CLASSICAL NIGHT", 
+      title: "Classical Night", 
       desc: "From the pulsating beats of the music to the kaleidoscope of colors lighting up the night sky. Here's to reliving those cherished moments and having a blast along the way!",
-      image: maskGroup //image1 
+      image: "/assets/imgs/home/saptami-bg.webp" //image1 
     },
     { 
       day: "02", 
-      title: "BEINGS NIGHT", 
+      title: "BEings Night", 
       desc: "Experience the raw energy of live rock as the best bands take the stage to electrify your soul and keep the energy soaring.",
-      image: maskGroup //image2 
+      image: "/assets/imgs/home/ashtami-bg.webp" //image2 
     },
     { 
       day: "03", 
-      title: "KOLKATA NIGHT", 
+      title: "Kolkata Night", 
       desc: "Dance through the night as our guest DJs spin the most electric tracks under the neon glow of the Lords' Ground.",
-      image: maskGroup // image3 
+      image: "/assets/imgs/home/navami-bg.webp" // image3 
     },
     { 
       day: "04", 
-      title: "MUMBAI NIGHT", 
+      title: "Mumbai Night", 
       desc: "A grand finale celebrating the spirit of Rebecca with prestigious performances, awards, and memories for a lifetime.",
-      image: maskGroup //image4 
+      image: "/assets/imgs/home/dashami-bg.webp" //image4 
     },
   ];
 
@@ -63,15 +59,11 @@ const Schedule = () => {
           />
           <div className="text-overlay">
             <p>{scheduleData[activeTab].desc}</p>
-            <div className="button-wrapper">
+            {/* <div className="button-wrapper">
               <Button 
                 innerText="KNOW MORE" 
-                variant="primary" 
-                color="magenta" 
-                size="medium"
-                href="#"
               />
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

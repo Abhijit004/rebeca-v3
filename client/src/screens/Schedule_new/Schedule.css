@@ -3,7 +3,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 60px 20px;
   background-color: transparent;
 }
 
@@ -11,43 +10,36 @@
 .tabs-container {
   display: flex;
   justify-content: center;
-  gap: 15px;
-  margin: 50px 0 60px 0;
+  gap: 0.5rem;
   width: 100%;
   flex-wrap: wrap;
 }
 
 .tab-item {
-  background: rgba(46, 20, 35, 0.9); /* Deep plum */
-  padding: 18px 28px;
+  background: rgba(46, 20, 35, 0.9);
+  padding: 1rem 3rem;
   cursor: pointer;
   text-align: center;
   transition: 0.3s ease-in-out;
   min-width: 160px;
-  border-radius: 2px;
 }
 
 .tab-item.active {
-  background: linear-gradient(180deg, #e91e63 0%, #ad1457 100%);
+  background: linear-gradient(45deg, var(--accent2), var(--accent1));
   transform: scale(1.05);
 }
 
 .day-label {
-  display: block;
   font-weight: 800;
-  font-size: 1.3rem;
-  letter-spacing: 2px;
+  font-size: 2rem;
   color: #fff;
 }
 
 .event-label {
-  display: block;
-  font-size: 0.65rem;
+  font-size: 1rem;
   font-weight: 400;
-  letter-spacing: 1px;
-  color: rgba(255, 255, 255, 0.8);
   margin-top: 4px;
-  text-transform: uppercase;
+  font-family: var(--body-font);
 }
 
 /* Content Viewport */
@@ -73,10 +65,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: brightness(0.4) blur(1px);
-  /* The "Mask group" effect from Figma */
-  mask-image: radial-gradient(circle, black 20%, transparent 80%);
-  -webkit-mask-image: radial-gradient(circle, black 20%, transparent 80%);
+  filter: brightness(0.5);
 }
 
 .text-overlay {
@@ -112,7 +101,6 @@
     gap: 12px;
     justify-content: center;
     max-width: 340px;
-    margin: 30px auto 40px; /* Center it */
   }
   
   .tab-item {

@@ -1,7 +1,7 @@
 {
     "short_name": "Rebeca",
-    "description": "Get ready as the 84th edition of REBECA is right around the corner. BEings, Pujo asche!",
-    "name": "Rebeca: 84th edition",
+    "description": "Get ready as the 85th edition of REBECA is right around the corner. BEings, Pujo asche!",
+    "name": "Rebeca: 85th edition",
     "icons": [
         {
             "src": "favicon-64x64.ico",
@@ -43,15 +43,15 @@
         {
             "name": "Our Team",
             "short_name": "Team",
-            "description": "Meet the passionate members of the Rebeca team, each dedicated to orchestrating the 84th edition of Rebeca with unwavering commitment and creativity.",
+            "description": "Meet the passionate members of the Rebeca team, each dedicated to orchestrating the 85th edition of Rebeca with unwavering commitment and creativity.",
             "url": "/team",
             "icons": [{ "src": "favicon-96x96.ico", "sizes": "96x96" }]
         },
         {
             "name": "Merchandise",
             "short_name": "Merchandise",
-            "description": "Delve into the exclusive world of Rebeca's official merchandise, featuring the iconic T-shirt design of the 84th edition.",
-            "url": "/team",
+            "description": "Delve into the exclusive world of Rebeca's official merchandise, featuring the iconic T-shirt design of the 85th edition.",
+            "url": "/merchandise",
             "icons": [{ "src": "favicon-96x96.ico", "sizes": "96x96" }]
         }
     ],
@@ -77,7 +77,9 @@
     "orientation": "any",
     "lang": "en",
     "display": "standalone",
-    "theme_color": "#5075f6",
+    "theme_color": "#7e34ff",
     "background_color": "#171717",
-    "categories": ["entertainment", "lifestyle"]
+    "categories": ["entertainment", "lifestyle", "concert", "festival", "cultural", "event"],
+    "display_override": ["window-controls-overlay", "standalone"],
+    "prefer_related_applications": false
 }

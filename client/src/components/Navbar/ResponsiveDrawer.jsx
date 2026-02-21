@@ -44,7 +44,6 @@ const menuItems = [
 ];
 
 const RespDrawer = ({ open, onClose }) => {
-    const theme = useTheme();
     const navigate = useNavigate();
     const drawerWidth = window.innerWidth;
     const [nav, setNav] = useState("Home");
@@ -68,7 +67,7 @@ const RespDrawer = ({ open, onClose }) => {
                     alt="rebeca_logo"
                     style={{ padding: "1rem 0px", width: "100px", marginLeft: "10px" }}
                 />
-                <IconButton onClick={() => onClose()} color="primary">
+                <IconButton onClick={() => onClose()}>
                     <Close />
                 </IconButton>
             </DrawerHeader>
@@ -95,7 +94,7 @@ const RespDrawer = ({ open, onClose }) => {
                             >
                                 <ListItemText
                                     primary={item.text}
-                                    sx={{ color: item.text === nav ? "var(--primary)" : "" }}
+                                    sx={{ color: item.text === nav ? "var(--accent2)" : "" }}
                                 />
                             </ListItemButton>
                         </ListItem>
@@ -114,7 +113,7 @@ const RespDrawer = ({ open, onClose }) => {
                         width: 'max-content'
                     }}
                 >
-                    <Typography variant="h5" fontFamily={"Sedgwick Ave Display"}>
+                    <Typography variant="h5" fontFamily={"var(--body-font)"}>
                         Join Rebeca as a Volunteer!
                     </Typography>
 
@@ -127,12 +126,10 @@ const RespDrawer = ({ open, onClose }) => {
                         startIcon={<Favorite />}
                         endIcon={<East />}
                         onClick={() => window.open("https://forms.gle/qnceaoaaTiBTJ3627", "_blank")}
+                        color="secondary"
                     >
                         Join as Volunteer
                     </Button>
-                    {/* <Typography sx={{ textShadow: "0 0 10px #000", paddingTop: "1rem" }}>
-                        Join REBECA as volunteer and help in loading the fun and laughter together!
-                    </Typography> */}
                 </ListItem>
             </List>
         </Drawer>

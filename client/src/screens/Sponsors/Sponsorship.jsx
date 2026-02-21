@@ -79,10 +79,10 @@ function Sponsorship() {
     }, []);
 
     const onButtonClick = () => {
-        const pdfUrl = "/assets/rebeca84brochure.pdf";
+        const pdfUrl = "/assets/rebeca-sponsorship-brochure.pdf";
         const link = document.createElement("a");
         link.href = pdfUrl;
-        link.download = "Rebeca84Brochure.pdf"; // specify the filename
+        link.download = "rebeca-sponsorship-brochure.pdf"; // specify the filename
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);

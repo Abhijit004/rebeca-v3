@@ -35,7 +35,6 @@ const Navbar = () => {
                             id="drawer-open-btn"
                             onClick={handleDrawerOpen}
                             variant="filled"
-                            color="primary"
                             
                         >
                             <MenuIcon />

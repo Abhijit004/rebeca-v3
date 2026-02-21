@@ -4,6 +4,7 @@
   box-sizing: border-box;
   width: 100%;
   font-family: 'Delius Swash Caps', serif;
+  background: #141414;
 
   /* width: min(100%, 1500px); */
 }
