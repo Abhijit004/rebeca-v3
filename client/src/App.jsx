@@ -15,6 +15,9 @@ import Preloader from "./components/Preloader/Preloader.jsx";
 import DrawingLoader from "./components/Preloader/DrawingLoader.jsx";
 import ScrollSmoother from "./components/ScrollSmoother/ScrollSMoother.jsx";
 
+// 1. IMPORT YOUR NEW COMPONENT (Adjust the path if you saved it elsewhere)
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop.jsx"; 
+
 const client_ID = import.meta.env.VITE_GOOGLE_CLIENT_ID;
 export const nights = { saptami: 19, ashtami: 20, navami: 21, dashami: 22 };
 
@@ -22,18 +25,18 @@ const darkTheme = createTheme({
     palette: {
         mode: "dark",
         primary: {
-            main: "#5075f6", // Light blue
+            main: "#5075f6", 
         },
         secondary: {
-            main: "#705dea", // Pink
+            main: "#705dea", 
         },
         background: {
-            default: "#1a1a1a", // Dark background
-            paper: "#1d1d1d", // Slightly lighter for cards, etc.
+            default: "#1a1a1a", 
+            paper: "#1d1d1d", 
         },
         text: {
-            primary: "#ffffff", // White text
-            secondary: "#bdbdbd", // Grey text
+            primary: "#ffffff", 
+            secondary: "#bdbdbd", 
         },
     },
 });
@@ -55,6 +58,9 @@ function App() {
                         <Analytics />
                         <AuthProvider>
                             <Router>
+                                {/* 2. DROP IT RIGHT HERE INSIDE THE ROUTER */}
+                                <ScrollToTop />
+                                
                                 <Navbar></Navbar>
                                 <AllRoutes></AllRoutes>
                                 {/* <Footer></Footer> */}

@@ -32,6 +32,10 @@ const SponsorSkillTree = () => {
   const activeTierDetails = tiers.find(t => t.id === displayLevel);
 
   useGSAP(() => {
+    // FIX 1: Instantly reset the scroll to the top when navigating from another page
+    // This prevents React Router from inheriting the scroll position of the Home page
+    window.scrollTo(0, 0);
+
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: triggerRef.current,
@@ -51,7 +55,6 @@ const SponsorSkillTree = () => {
             currentLevelRef.current = newLevel;
             setActiveLevel(newLevel); 
 
-            // FIX 1: Kill existing animations so fast scrolling doesn't break the text
             gsap.killTweensOf(codexRef.current);
             
             gsap.to(codexRef.current, {
@@ -71,7 +74,6 @@ const SponsorSkillTree = () => {
 
     scrollTriggerRef.current = tl.scrollTrigger; 
 
-    // FIX 2: Animate BOTH lines and BOTH sparks. CSS handles which one you see!
     tl.fromTo('.tree-progress', 
       { strokeDashoffset: 100 }, { strokeDashoffset: 0, ease: "none" }, 0);
     
@@ -81,7 +83,17 @@ const SponsorSkillTree = () => {
     tl.fromTo('.mobile-spark', 
       { left: "50%", top: "15%" }, { left: "50%", top: "85%", ease: "none" }, 0);
 
-  }, { scope: triggerRef }); // No dependencies! Completely immune to window resizing.
+    // FIX 2: The SPA Refresh Timer
+    // Forces GSAP to recalculate its trigger positions right after the page renders 
+    // and layout shifts (like images loading) have settled.
+    const stRefresh = setTimeout(() => {
+      ScrollTrigger.refresh();
+    }, 300);
+
+    // Cleanup function to clear the timeout if the component unmounts quickly
+    return () => clearTimeout(stRefresh);
+
+  }, { scope: triggerRef }); 
 
   const handleNodeClick = (levelId) => {
     if (!scrollTriggerRef.current) return;
@@ -122,7 +134,6 @@ const SponsorSkillTree = () => {
             <div
               key={tier.id}
               className={`tree-node-horizontal ${activeLevel >= tier.id ? 'node-unlocked' : ''} ${activeLevel === tier.id ? 'node-current' : ''}`}
-              /* Uses CSS Variables for flawless responsive positioning */
               style={{ '--dt-x': tier.x, '--dt-y': tier.y, '--mb-x': tier.y, '--mb-y': tier.x }}
               onClick={() => handleNodeClick(tier.id)}
             >
