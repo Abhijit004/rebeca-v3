@@ -69,10 +69,10 @@ const Navbar = () => {
                             <NavLink id="nav-merchandise" to="/merchandise" className={"item"}>
                                 Merchandise
                             </NavLink>
-                            <AccountMenu />
+                            {/* <AccountMenu /> */}
                         </>
                     )}
-                    {width < 720 && (
+                    {/* {width < 720 && (
                         <Box
                             sx={{
                                 display: "flex",
@@ -80,7 +80,7 @@ const Navbar = () => {
                         >
                             <AccountMenu />
                         </Box>
-                    )}
+                    )} */}
                 </div>
             </div>
 
