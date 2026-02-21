@@ -4,14 +4,13 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
 
-// Register GSAP plugins
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
-const ScrollSmoother = ({ children }) => {
-  const lenisRef = useRef();
+// Export this so ScrollToTop can find it
+export let lenisInstance = null;
 
+const ScrollSmoother = ({ children }) => {
   useEffect(() => {
-    // 1. Initialize Lenis
     const lenis = new Lenis({
       duration: 1.2,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
@@ -20,22 +19,19 @@ const ScrollSmoother = ({ children }) => {
       smoothWheel: true,
     });
 
-    lenisRef.current = lenis;
+    lenisInstance = lenis; // Store the instance globally
 
-    // 2. Sync ScrollTrigger with Lenis
     lenis.on('scroll', ScrollTrigger.update);
 
-    // 3. Hook Lenis into GSAP's ticker
-    gsap.ticker.add((time) => {
+    const tickerFunction = (time) => {
       lenis.raf(time * 1000);
-    });
+    };
+    gsap.ticker.add(tickerFunction);
 
-    // 4. Cleanup
     return () => {
       lenis.destroy();
-      gsap.ticker.remove((time) => {
-        lenis.raf(time * 1000);
-      });
+      gsap.ticker.remove(tickerFunction);
+      lenisInstance = null;
     };
   }, []);
 
