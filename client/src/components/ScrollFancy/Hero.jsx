@@ -147,7 +147,7 @@ const GsapScrubber = () => {
                             position: "absolute",
                             zIndex: 10,
                             color: "white",
-                            fontSize: "clamp(3rem, 12vw, 8rem)",
+                            fontSize: "clamp(5rem, 12vw, 12rem)",
                             fontWeight: "900",
                             textTransform: "uppercase",
                             opacity: 0,

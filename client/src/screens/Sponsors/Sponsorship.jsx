@@ -7,10 +7,10 @@ import { Link } from "react-router-dom";
 import pastSponsorJsonData from "../../assets/data/pastSponsors.json";
 import sponsorJsonData from "../../assets/data/sponsors.json";
 import { Divider, Typography } from "@mui/material";
-import SponsorsMarquee  from "../../components/SponsorsMarquee/SponsorsMarquee";
+import SponsorsMarquee from "../../components/SponsorsMarquee/SponsorsMarquee";
 import WhySponsorBento from "../../components/WhySponsorBento/WhySponsorBento";
 import SponsorSkillTree from "../../components/SponsorSkillTree/SponsorSkillTree";
-
+import Headingv2 from "../../components/Headingv2/Headingv2";
 const Heading1 = ({ title, subTitle, w }) => {
     return (
         <div
@@ -79,10 +79,10 @@ function Sponsorship() {
     }, []);
 
     const onButtonClick = () => {
-        const pdfUrl = "/assets/rebeca84brochure.pdf";
+        const pdfUrl = "/assets/rebeca-sponsorship-brochure.pdf";
         const link = document.createElement("a");
         link.href = pdfUrl;
-        link.download = "Rebeca84Brochure.pdf"; // specify the filename
+        link.download = "rebeca-sponsorship-brochure.pdf"; // specify the filename
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
@@ -91,12 +91,12 @@ function Sponsorship() {
     return (
         <div className="sponsor-wrap">
             <div className="sponsor">
-                <Heading
-                    title={"Want to sponsor us?"}
-                    subTitle={
-                        "Prepare to be swept away as you put your best foot forward in this epic celebration of creativity and culture tha promises you laughter, joy and memories that will last you a lifetime and more. Keep your water bottles handy and get ready to feel the heat cuz the 84th edition of REBECA is back with a bang!"
-                    }
-                ></Heading>
+                <div style={{ marginTop: "2rem", marginBottom: "2rem" }}>
+                    <Headingv2 title={"Want to Sponsor Us?"} />
+                    <p className="sub-title want-to-sponser-us">
+                        Prepare to be swept away as you put your best foot forward in this epic celebration of creativity and culture tha promises you laughter, joy and memories that will last you a lifetime and more. Keep your water bottles handy and get ready to feel the heat cuz the 84th edition of REBECA is back with a bang!
+                    </p>
+                </div>
                 <Link to={"#"}>
                     <Button
                         className="download_btn"
@@ -120,18 +120,24 @@ function Sponsorship() {
                         }
                         w={widthSize}
                     ></Heading1>
-                    <Heading1
-                        className={"heading_spon_second"}
-                        title={"What is Rebeca? "}
-                        subTitle={
-                            "REBECA, short for REunion and Bengal Engineering College Annuals, is the annual cultural fest of IIEST, Shibpur. From the classical Saptami night, to the BEings' night on Ashtami, from the soulful Kolkata symphonies on Navami, to the endless Bollywood magic on the Dashami night, our vibrant fest is nothing short of a second Durga Puja to us! Get ready as the 84th edition of REBECA is right around the corner. BEings, Pujo asche!"
-                        }
-                        w={"70%"}
-                    ></Heading1>
+                    <div className="what-is-rebeca-container">
+                        <div className="what-is-rebeca-heading">
+                            <Headingv2 title={"What is Rebeca?"} />
+                        </div>
+                        <div className="sub-title what-is-rebeca-text">
+                            REBECA, short for REunion and Bengal Engineering College Annuals, is the annual cultural fest of IIEST, Shibpur. From the classical Saptami night, to the BEings' night on Ashtami, from the soulful Kolkata symphonies on Navami, to the endless Bollywood magic on the Dashami night, our vibrant fest is nothing short of a second Durga Puja to us! Get ready as the 84th edition of REBECA is right around the corner. BEings, Pujo asche!
+                        </div>
+                    </div>
                 </section>
 
                 <section className="section-2">
-                    <WhySponsorBento />
+                    <div style={{ padding: "2rem" }}>
+                        <div style={{ paddingLeft: "3rem" }}>
+                            <Headingv2 title={"Why Sponsor Rebeca?"}></Headingv2>
+                        </div>
+                        <WhySponsorBento />
+                    </div>
+
                 </section>
                 {/* <section className="section-2">
                     <div className="cover-pic">
@@ -143,7 +149,7 @@ function Sponsorship() {
                 </section> */}
 
                 <section className="section-3">
-                    <Heading1 title={"Sponsor Categories"} w={"100%"}></Heading1>
+                    <Headingv2 title={"Sponsor Categories"} w={"100%"}></Headingv2>
                     <SponsorSkillTree />
                 </section>
                 <div
@@ -168,7 +174,7 @@ function Sponsorship() {
                             paddingBottom: "5rem",
                             fontSize: "2.2rem",
                             opacity: "0.5",
-                            textAlign:"center"
+                            textAlign: "center"
                         }}
                     >
                         The oldest cultural fest of India
@@ -186,7 +192,8 @@ function Sponsorship() {
                     </Typography>
                 </div>
 
-                <section className="section-4">
+
+                {/* <section className="section-4">
                     <div style={{ padding: "0 1rem" }}>
                         <Heading1 title={"Sponsors"}></Heading1>
                     </div>
@@ -200,16 +207,19 @@ function Sponsorship() {
                             </div>
                         </div>
                     ))}
-                </section>
+                </section> */}
 
                 {/* --- UPDATED PAST SPONSORS SECTION --- */}
                 <section className="section-4">
-                    <div style={{ padding: "0 1rem" }}>
+                    {/* <div style={{ padding: "0 1rem" }}>
                         <Heading1 title={"Past-sponsors"}></Heading1>
+                    </div> */}
+                    <div style={{ padding: "0 1rem", marginBottom: "3rem" }}>
+                        <Headingv2 title={"Past Sponsors"} />
                     </div>
-                    
+
                     <SponsorsMarquee sponsorsList={pastSponsorJsonData} />
-                    
+
                 </section>
             </div>
         </div>

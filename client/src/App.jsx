@@ -8,6 +8,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer.jsx";
 import Footer2 from "./components/Footer2/Footer2.jsx";
 
+
 import { createTheme, ThemeProvider, CssBaseline } from "@mui/material";
 import { GoogleOAuthProvider } from "@react-oauth/google";
 import { AuthProvider } from "./AuthContext.jsx";

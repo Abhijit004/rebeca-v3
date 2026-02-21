@@ -98,5 +98,41 @@
 	{
 		"id": 25,
 		"imgname": "SponsorsImg/KTM"
+	},
+	{
+		"id": 26,
+		"imgname": "sponsorsImages/ITD-cement"
+	},
+	{
+		"id": 27,
+		"imgname": "sponsorsImages/zetwerk"
+	},
+	{
+		"id": 28,
+		"imgname": "sponsorsImages/RAINBOW"
+	},
+	{
+		"id": 29,
+		"imgname": "sponsorsImages/edugraph"
+	},
+	{
+		"id": 30,
+		"imgname": "sponsorsImages/91-9-friends"
+	},
+	{
+		"id": 31,
+		"imgname": "sponsorsImages/pvr-inox"
+	},
+	{
+		"id": 32,
+		"imgname": "sponsorsImages/yousta"
+	},
+	{
+		"id": 33,
+		"imgname": "sponsorsImages/nestle"
+	},
+	{
+		"id": 34,
+		"imgname": "sponsorsImages/cream-and-fudge"
 	}
 ]

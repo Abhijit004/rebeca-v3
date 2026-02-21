@@ -11,7 +11,7 @@ const reasons = [
 const WhySponsorBento = () => {
   return (
     <div className="bento-container">
-      <h2 className="display-font bento-heading">Why Sponsor REBECA?</h2>
+
       <div className="bento-grid">
         {reasons.map((item) => (
           <div key={item.id} className="bento-card">

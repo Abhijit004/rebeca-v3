@@ -6,11 +6,13 @@ import Sponsorship from "./screens/Sponsors/Sponsorship";
 
 // import Daydetails from "./screens/Daydetails/Daydetails";
 import Merchandise from "./screens/Merchandise/Merchandise";
+import ComingSoon2k26 from "./screens/ComingSoon2k26/ComingSoon2k26";
 import Team from "./screens/Team/Team";
 // import EventSingle from "./screens/EventSingle/EventSingle";
 import ProfileDashboard from "./components/ProfileInfo/ProfileInfo";
 // import EventReg from "./components/EventReg/EventReg";
 import PageNotFound from "./screens/PageNotFound/PageNotFound";
+import ComingSoon from "./screens/ComingSoon/ComingSoon";
 // import ComingSoon from "./screens/ComingSoon/ComingSoon";
 
 const AllRoutes = () => {
@@ -28,7 +30,8 @@ const AllRoutes = () => {
             <Route exact path="/events/:eventSlug" element={<EventSingle />} /> */}
             <Route exact path="/sponsorship" element={<Sponsorship />} />
             <Route exact path="/team" element={<Team />} />
-            <Route exact path="/merchandise" element={<Merchandise />} />
+            {/* <Route exact path="/merchandise" element={<Merchandise />} /> */}
+            <Route exact path="/merchandise" element={<ComingSoon />} />
             <Route exact path="/userUpdate" element={<ProfileDashboard />} />
             {/* <Route exact path="/events/:eventSlug/register" element={<EventReg />} /> */}
             <Route exact path="/*" element={<PageNotFound />} />

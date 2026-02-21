@@ -1,5 +1,5 @@
 .bento-container {
-  width: 90%;
+  width: 110%;
   max-width: 1100px;
   margin: 4rem auto;
   text-align: center;
@@ -17,7 +17,7 @@
 }
 
 .bento-card {
-  background: rgba(255, 255, 255, 0.03); 
+  background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 16px;
   padding: 2.5rem 1.5rem;
@@ -30,13 +30,15 @@
 .bento-card:hover {
   transform: translateY(-8px);
   background: rgba(255, 255, 255, 0.06);
-  border-color: var(--accent1); /* Uses the pink from your index.css */
-  box-shadow: 0 10px 30px rgba(190, 38, 110, 0.15); 
+  border-color: var(--accent1);
+  /* Uses the pink from your index.css */
+  box-shadow: 0 10px 30px rgba(190, 38, 110, 0.15);
 }
 
 .bento-icon {
   font-size: 2.5rem !important;
-  color: var(--accent2); /* Uses the purple from your index.css */
+  color: var(--accent2);
+  /* Uses the purple from your index.css */
   margin-bottom: 1.2rem;
 }
 
@@ -51,5 +53,6 @@
   color: rgba(255, 255, 255, 0.6);
   font-size: 1.2rem;
   line-height: 1.4;
-  font-family: 'Exo 2', sans-serif; /* Uses your imported font for better readability */
+  font-family: 'Exo 2', sans-serif;
+  /* Uses your imported font for better readability */
 }

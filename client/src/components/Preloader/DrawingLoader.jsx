@@ -77,7 +77,7 @@ const DrawingLoader = ({ onComplete }) => {
           strokeLinecap="round"
         />
       </svg>
-      <p style={styles.loadingText}>INITIALIZING EXPERIENCE</p>
+      <p style={styles.loadingText}>Setting up the stage for something special...</p>
     </div>
   );
 };
@@ -85,13 +85,19 @@ const DrawingLoader = ({ onComplete }) => {
 const styles = {
   wrapper: {
     position: 'fixed', inset: 0, zIndex: 1000,
-    backgroundColor: '#000', display: 'flex',
-    flexDirection: 'column', justifyContent: 'center', alignItems: 'center'
+    display: 'flex',
+    background: '#000',
+    flexDirection: 'column', justifyContent: 'center', alignItems: 'center',
   },
-  svg: { width: '80px', height: '80px', marginBottom: '20px' },
+  svg: { width: '10vw', height: '10vw', marginBottom: '20px', zIndex: 100000 },
   loadingText: {
-    color: 'white', fontSize: '10px', letterSpacing: '4px',
-    opacity: 0.4, fontWeight: '300'
+    color: 'white', letterSpacing: '4px',
+    opacity: 1, fontWeight: '300',
+    width: '100%',
+    fontSize: '1rem',
+    textAlign: 'center',
+    width: '80%',
+    zIndex: 100000
   }
 };
 

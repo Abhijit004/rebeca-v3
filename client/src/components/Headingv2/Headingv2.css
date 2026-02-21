@@ -4,6 +4,7 @@
     justify-content: center;
     position: relative;
     width: 100%;
+    margin-bottom: 3rem;
     font-family: var(--heading-font);
 }
 

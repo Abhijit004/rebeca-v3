@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Anton&family=Inter:wght@400;500;600&display=swap');
+
+.coming-soon-2k26-container {
+    min-height: 100vh;
+    background-color: #000000;
+    /* Pure Black background */
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+}
+
+.top-banner {
+    padding: 2rem;
+    text-align: center;
+    width: 100%;
+}
+
+.page-title {
+    font-size: clamp(4rem, 15vw, 8rem);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0;
+    font-family: 'Anton', sans-serif;
+    line-height: 1;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
