@@ -1,0 +1,437 @@
+/* --- The Outer Trigger Sandbox --- */
+.tree-trigger-wrapper {
+    width: 100%;
+    display: block;
+    /* FIX 1: Removes the flexbox conflict that broke the pin! */
+    padding: 2rem 0;
+}
+
+
+
+.horizontal-tree-wrapper {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    /* FIX 2: Restores the automatic centering */
+    display: flex;
+    flex-direction: column;
+    background: rgba(15, 18, 20, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    height: 640px;
+    min-height: 640px;
+}
+
+/* --- TOP SIDE: Canvas --- */
+.tree-canvas-horizontal {
+    position: relative;
+    width: 100%;
+    height: 280px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    background: radial-gradient(circle at center, rgba(30, 30, 40, 0.5) 0%, rgba(10, 10, 15, 1) 100%);
+}
+
+.tree-svg-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/* The dark grey background line */
+.tree-track {
+    stroke: rgba(255, 255, 255, 0.1);
+    stroke-width: 4px;
+}
+
+/* The glowing pink/purple line that GSAP animates */
+.tree-progress {
+    stroke: var(--accent2);
+    stroke-width: 4px;
+    filter: drop-shadow(0 0 6px var(--accent2));
+}
+
+@keyframes tracePath {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+/* --- HTML Nodes --- */
+.tree-node-horizontal {
+    position: absolute;
+    /* Driven entirely by the CSS variables we set in React! */
+    left: var(--dt-x);
+    top: var(--dt-y);
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.node-icon-wrapper {
+    width: 50px;
+    height: 50px;
+    background: #15181c;
+    /* FIX 1: Solid dark background instead of transparent */
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.node-icon-wrapper .material-icons {
+    transform: rotate(-45deg);
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+/* Hand-written Text mapped perfectly to your original design */
+.node-amount {
+    position: absolute;
+    top: -45px;
+    font-family: 'Agency FB', cursive;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+    white-space: nowrap;
+}
+
+.node-name {
+    position: absolute;
+    bottom: -65px;
+    font-family: 'Agency FB', cursive;
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    white-space: nowrap;
+    text-align: center;
+}
+
+/* Node Hover & Active States */
+.node-unlocked .node-icon-wrapper {
+    border-color: var(--accent1);
+    background: #361022;
+    /* FIX 2: Solid dark pink/red instead of rgba(0.1) */
+    box-shadow: 0 0 15px rgba(190, 38, 110, 0.3);
+}
+
+.node-unlocked .material-icons {
+    color: var(--accent1);
+}
+
+.node-unlocked .node-name {
+    color: white;
+}
+
+.node-unlocked .node-amount {
+    color: white;
+}
+
+.node-current .node-icon-wrapper {
+    transform: rotate(45deg) scale(1.2);
+    background: var(--accent1);
+    /* Already solid */
+    border-color: white;
+    box-shadow: 0 0 25px var(--accent1);
+}
+
+.node-current .material-icons {
+    color: white;
+}
+
+.node-current .node-name {
+    color: var(--accent1);
+    text-shadow: 0 0 10px rgba(190, 38, 110, 0.5);
+}
+
+.node-current .node-amount {
+    color: var(--accent2);
+}
+
+.tree-node-horizontal:hover .node-icon-wrapper {
+    transform: rotate(45deg) scale(1.1);
+}
+
+.node-current:hover .node-icon-wrapper {
+    transform: rotate(45deg) scale(1.2);
+}
+
+/* --- BOTTOM SIDE: Codex --- */
+.tree-codex-horizontal {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    /* Anchors everything nicely */
+    padding: 3rem 4rem;
+    background: rgba(0, 0, 0, 0.4);
+    gap: 3rem;
+    height: 360px;
+    /* THE FIX: Strictly lock the height so it never grows! */
+}
+
+.codex-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    /* Locks the title and button to the top */
+}
+
+.codex-level-badge {
+    font-family: 'Agency FB', sans-serif;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: var(--accent1);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: rgba(190, 38, 110, 0.15);
+    padding: 6px 16px;
+    border-radius: 20px;
+    margin-bottom: 1.5rem;
+}
+
+.codex-title {
+    font-size: 3.5rem;
+    color: white;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    line-height: 1;
+    font-family: "Agency FB", serif;
+}
+
+.initiate-btn {
+    padding: 1rem 3rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--accent1);
+    color: white;
+    font-family: 'Agency FB', sans-serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+}
+
+.initiate-btn:hover {
+    background: linear-gradient(90deg, var(--accent1), var(--accent2));
+    border-color: transparent;
+    box-shadow: 0 5px 20px rgba(190, 38, 110, 0.4);
+}
+
+.codex-right {
+    flex: 1.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* Prevents the text from bouncing up and down */
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    padding-left: 3rem;
+}
+
+.perks-heading {
+    font-family: 'Agency FB', sans-serif;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+}
+
+/* Puts the perks into a neat 2-column grid to use the widescreen space */
+.perks-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.perk-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    color: #e0e0e0;
+    font-family: 'Agency FB', sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.4;
+}
+
+.perk-bullet {
+    font-size: 1.2rem !important;
+    color: var(--accent1);
+    margin-top: 2px;
+}
+
+.inherited-perks-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 1.5rem;
+    padding: 12px 20px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px dashed rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    color: rgba(255, 255, 255, 0.6);
+    font-family: 'Agency FB', sans-serif;
+    font-size: 1rem;
+    width: fit-content;
+}
+
+.inherited-perks-badge .material-icons {
+    font-size: 1.2rem;
+    color: var(--accent2);
+}
+
+.track-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.mobile-track {
+    display: none;
+}
+
+.desktop-track {
+    display: block;
+}
+
+.codex-animated-wrapper {
+    display: flex;
+    width: 100%;
+    gap: 3rem;
+    flex-direction: row;
+}
+
+/* The Base Spark */
+.progress-spark {
+    position: absolute;
+    background: #fff;
+    border-radius: 10px;
+    transform: translate(-50%, -50%) scale(1);
+    z-index: 1;
+    animation: smoothPulse 0.8s infinite alternate ease-in-out;
+    pointer-events: none;
+}
+
+/* Desktop Horizontal Spark */
+.desktop-spark {
+    width: 14px;
+    height: 3px;
+    box-shadow: 0 0 5px 1px rgba(255, 255, 255, 0.9), -5px 0 10px 2px var(--accent1), -15px 0 15px 4px var(--accent2);
+}
+
+/* Mobile Vertical Spark */
+.mobile-spark {
+    width: 3px;
+    height: 14px;
+    box-shadow: 0 0 5px 1px rgba(255, 255, 255, 0.9), 0 -5px 10px 2px var(--accent1), 0 -15px 15px 4px var(--accent2);
+}
+
+@keyframes smoothPulse {
+    0% {
+        opacity: 0.7;
+        transform: translate(-50%, -50%) scale(0.9);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+}
+
+/* Responsiveness */
+@media (max-width: 900px) {
+
+    /* Hides desktop track, shows mobile track */
+    .desktop-track {
+        display: none;
+    }
+
+    .mobile-track {
+        display: block;
+    }
+
+    /* Uses CSS variables to automatically snap nodes to vertical layout */
+    .tree-node-horizontal {
+        left: var(--mb-x);
+        top: var(--mb-y);
+    }
+
+    /* Reflows the codex */
+    .codex-animated-wrapper {
+        gap: 1.5rem;
+        flex-direction: column;
+    }
+
+    /* Keep the rest of your mobile wrappers the same... */
+    .horizontal-tree-wrapper {
+        flex-direction: row;
+        height: 600px;
+        min-height: 600px;
+    }
+
+    .tree-canvas-horizontal {
+        width: 100px;
+        height: 100%;
+        border-bottom: none;
+        border-right: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .tree-codex-horizontal {
+        flex: 1;
+        height: 100%;
+        padding: 2rem 1.5rem;
+        align-items: flex-start;
+        overflow-y: auto;
+    }
+
+    .node-name {
+        display: none;
+    }
+
+    .node-amount {
+        top: auto;
+        bottom: -30px;
+        font-size: 1.1rem;
+    }
+
+    .codex-title {
+        font-size: 2.2rem;
+        margin-bottom: 1.5rem;
+        line-height: 1.1;
+    }
+
+    .perks-heading {
+        margin-bottom: 1rem;
+    }
+
+    .codex-right {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 1.5rem;
+        padding-left: 0;
+        border-left: none;
+    }
+
+    .perks-list {
+        grid-template-columns: 1fr;
+    }
+}

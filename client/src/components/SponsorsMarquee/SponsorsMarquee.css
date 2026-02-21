@@ -1,0 +1,52 @@
+.marquee-container {
+  width: 100%;
+  overflow: hidden;
+  padding: 4rem 0;
+  position: relative;
+  /* Fades the edges to match your exact --app-background */
+  mask-image: linear-gradient(to right, transparent, var(--app-background) 10%, var(--app-background) 90%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, var(--app-background) 10%, var(--app-background) 90%, transparent);
+  background-color: transparent; 
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: scroll 35s linear infinite; 
+}
+
+.marquee-container:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+.logo-group {
+  display: flex;
+  align-items: center;
+  gap: 5rem; 
+  padding-right: 5rem; 
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.sponsor-logo {
+  height: 70px; 
+  width: auto;
+  max-width: 180px;
+  object-fit: contain;
+  
+  /* The Grayscale to Color Magic */
+  filter: grayscale(100%) opacity(50%); 
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Gives a slight "spring" effect */
+  cursor: pointer;
+  
+  /* If your logos have white backgrounds, uncomment the line below to blend them */
+  /* mix-blend-mode: screen; */
+}
+
+.sponsor-logo:hover {
+  filter: grayscale(0%) opacity(100%);
+  transform: scale(1.15); 
+}
