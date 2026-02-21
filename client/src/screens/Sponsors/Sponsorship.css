@@ -76,7 +76,7 @@
     /* left: 0; */
     /* transform: translateX(-50%); */
     z-index: 0;
-    overflow: hidden;
+    overflow: clip;
 }
 .sponsor .section-1 .side-img img {
     width: 100%;
@@ -86,6 +86,7 @@
 }
 .sponsor .section-2 {
     width: 100%;
+    padding: 0 5rem;
     /* border:2px solid green; */
 }
 .sponsor .section-2 .flow-chart {

@@ -1,4 +1,3 @@
-// import React from "react";
 import React, { useEffect, useState } from "react";
 import "./Sponsorship.css";
 import SponsorCard from "./SponsorsCard";
@@ -8,9 +7,10 @@ import { Link } from "react-router-dom";
 import pastSponsorJsonData from "../../assets/data/pastSponsors.json";
 import sponsorJsonData from "../../assets/data/sponsors.json";
 import { Divider, Typography } from "@mui/material";
+import SponsorsMarquee from "../../components/SponsorsMarquee/SponsorsMarquee";
+import WhySponsorBento from "../../components/WhySponsorBento/WhySponsorBento";
+import SponsorSkillTree from "../../components/SponsorSkillTree/SponsorSkillTree";
 import Headingv2 from "../../components/Headingv2/Headingv2";
-import SponsorCategory from "../../components/SponsorshipCategory/SponsorshipCategory";
-import WhySponsor from "../../components/WhySponsor/WhySponsor";
 const Heading1 = ({ title, subTitle, w }) => {
     return (
         <div
@@ -130,25 +130,27 @@ function Sponsorship() {
                     </div>
                 </section>
 
-                <section className="section-2" style={{ width: "100%", display: "flex", justifyContent: "center", padding: "2rem 0" }}>
-                    <WhySponsor />
+                <section className="section-2">
+                    <div style={{ padding: "2rem" }}>
+                        <div style={{ paddingLeft: "3rem" }}>
+                            <Headingv2 title={"Why Sponsor Rebeca?"}></Headingv2>
+                        </div>
+                        <WhySponsorBento />
+                    </div>
+
                 </section>
                 {/* <section className="section-2">
-					<div className="cover-pic">
-						<img
-							src="/assets/imgs/sponsorship/coverPic1.webp"
-							alt=""
-						/>
-					</div>
-				</section> */}
+                    <div className="cover-pic">
+                        <img
+                            src="/assets/imgs/sponsorship/coverPic1.webp"
+                            alt=""
+                        />
+                    </div>
+                </section> */}
 
                 <section className="section-3">
-
-                    <Headingv2 title={"Sponsor Categories"} w={"60%"} >
-                    </Headingv2>
-                    <div className="sponsor-categories">
-                        <SponsorCategory />
-                    </div>
+                    <Headingv2 title={"Sponsor Categories"} w={"100%"}></Headingv2>
+                    <SponsorSkillTree />
                 </section>
                 <div
                     style={{
@@ -172,7 +174,7 @@ function Sponsorship() {
                             paddingBottom: "5rem",
                             fontSize: "2.2rem",
                             opacity: "0.5",
-                            textAlign:"center"
+                            textAlign: "center"
                         }}
                     >
                         The oldest cultural fest of India
@@ -207,6 +209,7 @@ function Sponsorship() {
                     ))}
                 </section> */}
 
+                {/* --- UPDATED PAST SPONSORS SECTION --- */}
                 <section className="section-4">
                     {/* <div style={{ padding: "0 1rem" }}>
                         <Heading1 title={"Past-sponsors"}></Heading1>
@@ -214,27 +217,12 @@ function Sponsorship() {
                     <div style={{ padding: "0 1rem", marginBottom: "3rem" }}>
                         <Headingv2 title={"Past Sponsors"} />
                     </div>
-                    <div className="center1">
-                        <div className="cards">
-                            {pastSponsorJsonData.map((sponsor, index) => (
-                                <SponsorCard key={index} sponsor={sponsor} />
-                            ))}
-                        </div>
-                    </div>
+
+                    <SponsorsMarquee sponsorsList={pastSponsorJsonData} />
+
                 </section>
             </div>
         </div>
     );
 }
 export default Sponsorship;
-
-// in case needed, removed from sponsors.json
-// {
-// 	"id": 8,
-// 	"title": "Drinks Partner",
-// 	"logos": [
-// 		{
-// 			"imgname": "sponsorsImages/RED BULL"
-// 		}
-// 	]
-// }

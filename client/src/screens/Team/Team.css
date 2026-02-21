@@ -1,11 +1,11 @@
 .team {
-    margin-top: 5rem;
     animation: fadeIn 0.5s linear forwards;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 1.5rem
+    padding: 1.5rem;
+    padding-top: 10rem;
 }
 
 .team h1 {

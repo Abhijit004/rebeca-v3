@@ -1,8 +1,6 @@
 .schedule-page {
-    min-height: 100vh;
     color: #fff;
     animation: fadeIn 0.5s linear forwards;
-    margin-top: 4rem;
 }
 
 /* ---------- Hero Header ---------- */
@@ -10,7 +8,7 @@
 .schedule-header {
     position: relative;
     width: 100%;
-    height: 90vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;

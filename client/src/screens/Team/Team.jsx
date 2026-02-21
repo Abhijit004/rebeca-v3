@@ -159,38 +159,12 @@ const Team = () => {
                                             borderRadius: "5px",
                                         }}
                                     >
-                                        {teamData.members.filter((member) => member.position==='Head').map((member, ki) => {
+                                        {teamData.members.map((member, ki) => {
                                             return (
                                                 <CustomAvatar
                                                     title={member.name}
-                                                    src={member.image}
-                                                    subtitle={member.position}
-                                                    phone={member.phone}
-                                                    icon={skeleton[i].icon}
-                                                    key={ki}
-                                                />
-                                            );
-                                        })}
-                                        
-                                        {teamData.members.filter((member) => member.position==='Associate Head').map((member, ki) => {
-                                            return (
-                                                <CustomAvatar
-                                                    title={member.name}
-                                                    src={member.image}
-                                                    subtitle={member.position}
-                                                    phone={member.phone}
-                                                    icon={skeleton[i].icon}
-                                                    key={ki}
-                                                />
-                                            );
-                                        })}
-                                        
-                                        {teamData.members.filter((member) => member.position==='Associate').map((member, ki) => {
-                                            return (
-                                                <CustomAvatar
-                                                    title={member.name}
-                                                    src={member.image}
-                                                    subtitle={member.position}
+                                                    src={member.img}
+                                                    // subtitle={member.tagline}
                                                     phone={member.phone}
                                                     icon={skeleton[i].icon}
                                                     key={ki}

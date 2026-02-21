@@ -21,8 +21,7 @@
 }
 .App{
   width: 100%;
-  overflow: hidden;
-  background: #181818;
+  overflow: clip;
   /* display: flex;
   align-items: center;
   justify-content: center;
