@@ -21,10 +21,10 @@
 }
 
 .page-title {
-    font-size: clamp(4rem, 15vw, 10rem);
+    font-size: clamp(4rem, 15vw, 8rem);
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    font-weight: 700;
+    font-weight: 600;
     color: #ffffff;
     margin: 0;
     font-family: 'Anton', sans-serif;
