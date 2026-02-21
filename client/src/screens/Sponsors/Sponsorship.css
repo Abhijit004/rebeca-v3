@@ -18,11 +18,19 @@
     max-width: 1200px;
 }
 
+.sponsor .heading {
+    font-family: var(--heading-font);
+    font-size: 4rem;
+    width: 100%;
+    text-align: center;
+}
+
 .want-to-sponser-us {
     text-align: center;
     max-width: 800px;
     padding: 0 1rem;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
+    color: #ffffffb2
 }
 .what-is-rebeca-container {
     width: 100%;
@@ -42,6 +50,7 @@
     margin-top: 1rem;
     font-size: 25px;
     line-height: 1.6;
+    color: #ffffff8b
 }
 .sponsor .heading {
     padding: 4rem 2rem 1rem 4rem;

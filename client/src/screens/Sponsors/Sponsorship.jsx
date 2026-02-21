@@ -42,6 +42,7 @@ const Heading1 = ({ title, subTitle, w }) => {
                     style={{
                         width: "100%",
                         textAlign: "left",
+                        color: "#ffffff8b"
                     }}
                 >
                     {subTitle}
@@ -92,7 +93,7 @@ function Sponsorship() {
         <div className="sponsor-wrap">
             <div className="sponsor">
                 <div style={{ marginTop: "2rem", marginBottom: "2rem" }}>
-                    <Headingv2 title={"Want to Sponsor Us?"} />
+                    <div className="heading">Want to Sponsor us?</div>
                     <p className="sub-title want-to-sponser-us">
                         Prepare to be swept away as you put your best foot forward in this epic celebration of creativity and culture tha promises you laughter, joy and memories that will last you a lifetime and more. Keep your water bottles handy and get ready to feel the heat cuz the 84th edition of REBECA is back with a bang!
                     </p>
@@ -172,7 +173,7 @@ function Sponsorship() {
                             fontFamily: "Sedgwick Ave Display",
                             padding: "2rem",
                             paddingBottom: "5rem",
-                            fontSize: "2.2rem",
+                            fontSize: "3rem",
                             opacity: "0.5",
                             textAlign: "center"
                         }}
@@ -186,6 +187,8 @@ function Sponsorship() {
                             textAlign: "center",
                             paddingTop: "5rem",
                             opacity: "0.8",
+                            fontFamily: 'var(--body-font)',
+                            fontSize: "1.3rem"
                         }}
                     >
                         Born in 1960, Rebeca is more than a cultural fest—it's a tradition etched in time. With every beat, spotlight, and standing ovation, it celebrates a history that no other college fest can claim.
