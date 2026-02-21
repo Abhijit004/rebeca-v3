@@ -81,6 +81,9 @@
   z-index: 1; 
   overflow: hidden; /* Keeps the pseudo-element contained */
 }
+.home .section-6 {
+  padding: 2.5rem 0;
+}
 .home .section-3::before {
   content: "";
   position: absolute;

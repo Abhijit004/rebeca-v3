@@ -42,7 +42,6 @@ const Home = () => {
             <section className="section-6">
                 <h1>MOMENTS</h1>
                 <h4>That last a lifetime</h4>
-
                 <CollageHeart />
             </section>
             <CountDown />
