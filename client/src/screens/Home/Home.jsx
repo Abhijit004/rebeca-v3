@@ -1,7 +1,7 @@
 import "./Home.css";
 import Heading from "../../components/Headingv2/Headingv2";
 import ArtistCard from "../../components/ArtistCard/ArtistCard";
-
+import ArtistList from "../../components/ArtistList/ArtistList"
 import Nightbanner from "../../components/Nightbanner/Nightbanner";
 import CollageHeart from "../../components/CollageHeart/CollageHeart";
 import Hero from "../../components/ScrollFancy/Hero"
@@ -28,10 +28,17 @@ const Home = () => {
                 <h4>Lords' Ground, IIEST Shibpur</h4>
                 <p>Prepare to be swept away as you put your best foot forward in this epic celebration of creativity and culture that promises you laughter, joy and memories that will last you a lifetime and more.</p>
             </section>
+<<<<<<< Updated upstream
             <section className="section-4">
                 <Heading title={"ARTISTS"} />
                 {/* <Marquee images={artists.map((artist) => `/assets/imgs/artists/${artist.img}`)} /> */}
             </section>
+=======
+            <section className="section-4 ">
+    <Heading title={"ARTISTS"} />
+    <ArtistList artists={artists} />
+</section>
+>>>>>>> Stashed changes
             <section className="section-5">
                 <Heading title={"SCHEDULE"} />
             </section>
