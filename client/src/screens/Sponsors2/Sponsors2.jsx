@@ -7,6 +7,9 @@ import SponsorsMarquee from "../../components/SponsorsMarquee/SponsorsMarquee";
 import SponsorsCategory from "../../components/SponsorCat/SponsorCat";
 
 const Sponsors2 = () => {
+    const beveragePartner = currentSponsors.find((s) => s.id === 1 || s.name === "Coca-Cola");
+    const otherPartners = currentSponsors.filter((s) => s.id !== 1 && s.name !== "Coca-Cola");
+
     return (
         <section className="sponsors2">
             <section className="intro">
@@ -32,8 +35,24 @@ const Sponsors2 = () => {
             </section>
             <section className="current-sponsors">
                 <h1>Our Partners</h1>
-                <div className="current-sponsors-grid">
-                    {currentSponsors.map((sponsor) => (
+                
+                {/* Beverage Partner Row */}
+                {beveragePartner && (
+                    <div className="current-sponsors-grid" style={{ marginBottom: "1rem", justifyContent: "center" }}>
+                        <div key={beveragePartner.id} className="sponsor-card beverage-card">
+                            <h3>{beveragePartner.title}</h3>
+                            <img 
+                                src={`/assets/imgs/sponsorship/${beveragePartner.imgname}.webp`} 
+                                alt={beveragePartner.name} 
+                                className="current-sponsor-logo beverage-logo" 
+                            />
+                        </div>
+                    </div>
+                )}
+
+                {/* Remaining Partners Row */}
+                <div className="current-sponsors-grid other-sponsors" style={{ marginTop: "1rem", maxWidth: "1200px" }}>
+                    {otherPartners.map((sponsor) => (
                         <div key={sponsor.id} className="sponsor-card">
                             <h3>{sponsor.title}</h3>
                             <img 

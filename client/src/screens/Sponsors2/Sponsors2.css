@@ -140,6 +140,15 @@
     margin-bottom: 2rem;
 }
 
+@media only screen and (min-width: 900px) {
+    .other-sponsors {
+        display: grid !important;
+        grid-template-columns: repeat(4, 1fr);
+        justify-items: center;
+        gap: 2rem 4rem;
+    }
+}
+
 .sponsor-card {
     display: flex;
     flex-direction: column;
@@ -177,6 +186,14 @@
 
 .sponsor-card:hover h3 {
     color: #ffffff !important;
+}
+
+.beverage-logo {
+    max-height: 160px !important;
+}
+
+.beverage-card {
+    width: 300px;
 }
 
 @media only screen and (max-width: 450px) {

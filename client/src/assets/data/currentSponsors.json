@@ -2,49 +2,80 @@
     {
         "id": 1,
         "title": "Exclusive Beverage Partner",
-        "name": "Cococola",
+        "name": "Coca-Cola",
         "imgname": "SponsorsImg/CocaCola"
     },
     {
-        "id": 2,
+        "id": 3,
+        "title": "Official Event Partner",
+        "name": "LR Production",
+        "imgname": "SponsorsImg/lr"
+    },
+    {
+        "id":2,
         "title": "Merchandise Partner",
         "name": "Cemindia",
         "imgname": "SponsorsImg/cemindia"
     },
     {
-        "id": 3,
+        "id": 4,
         "title": "Event Partner",
         "name": "Iocl",
         "imgname": "SponsorsImg/IOCL"
     },
     {
-        "id": 4,
+        "id": 5,
         "title": "Style Partner",
         "name": "Yousta",
         "imgname": "sponsorsImages/yousta"
     },
     {
-        "id": 5,
+        "id": 6,
         "title": "Beauty Partner",
         "name": "Lakme Academy",
         "imgname": "SponsorsImg/LAKME"
     },
     {
-        "id": 6,
+        "id": 7,
         "title": "Alumni Business Meet Partner",
         "name": "Dimensions",
         "imgname": "SponsorsImg/dimensions"
     },
     {
-        "id": 7,
+        "id": 8,
         "title": "Campus Decoration Partner",
         "name": "DMP Nirman",
         "imgname": "SponsorsImg/dmp"
     },
     {
-        "id": 8,
+        "id": 9,
         "title": "Exhibition Partner",
         "name": "Oropise solutions",
         "imgname": "SponsorsImg/oropise"
+    },
+    {
+        "id": 10,
+        "title": "Radio Partner",
+        "name": "91.9 friends fm",
+        "imgname": "sponsorsImages/91-9-friends"
+    },
+    
+    {
+        "id": 11,
+        "title": "Artist Management Partner",
+        "name": "Illusion Events",
+        "imgname": "SponsorsImg/illusion"
+    },
+    {
+        "id": 12,
+        "title": "Mobility Partner",
+        "name": "Uber",
+        "imgname": "SponsorsImg/uber"
+    },
+    {
+        "id": 13,
+        "title": "Refreshment Partner",
+        "name": "Amul",
+        "imgname": "SponsorsImg/amul"
     }
 ]
